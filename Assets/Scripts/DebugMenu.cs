@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 using UnityEditor;
 
 public static class DebugMenu {
@@ -10,3 +10,4 @@ public static class DebugMenu {
         }
     }
 }
+#endif

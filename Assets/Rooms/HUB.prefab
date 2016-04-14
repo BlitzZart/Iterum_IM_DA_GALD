@@ -170,6 +170,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &146192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 415346}
+  - 167: {fileID: 16752278}
+  m_Layer: 0
+  m_Name: Reverb Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &155378
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,8 +341,21 @@ Transform:
   - {fileID: 466086}
   - {fileID: 429094}
   - {fileID: 417762}
+  - {fileID: 415346}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &415346
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.3, y: 0, z: 13.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 410688}
+  m_RootOrder: 6
 --- !u!4 &417762
 Transform:
   m_ObjectHideFlags: 1
@@ -348,7 +377,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.38, y: 0.91, z: 2.43}
+  m_LocalPosition: {x: -2.38, y: 0, z: 2.43}
   m_LocalScale: {x: 1.2, y: 2.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 417762}
@@ -422,7 +451,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -71.7, y: 0.91, z: 5.3}
+  m_LocalPosition: {x: -107.18, y: 0, z: 5.3}
   m_LocalScale: {x: 1.2, y: 2.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 429094}
@@ -1153,6 +1182,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 171718}
   goal: {fileID: 165446}
+--- !u!167 &16752278
+AudioReverbZone:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146192}
+  m_Enabled: 1
+  m_MinDistance: 23.6
+  m_MaxDistance: 24.7
+  m_ReverbPreset: 1
+  m_Room: -1000
+  m_RoomHF: -100
+  m_DecayTime: 1.49
+  m_DecayHFRatio: 0.83
+  m_Reflections: -2602
+  m_ReflectionsDelay: 0.007
+  m_Reverb: 200
+  m_ReverbDelay: 0.011
+  m_HFReference: 5000
+  m_RoomRolloffFactor: 0
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

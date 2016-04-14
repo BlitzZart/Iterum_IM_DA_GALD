@@ -7,12 +7,12 @@ public class SqueezeWall : MonoBehaviour, ISwitchable {
 
     public float max, min;
 
-    private float speed = 20;
+    private float speed = 10.0f;
     private bool isVisible = true;
     private bool doSqueeze;
 
     private float stepWidth = 0.3f;
-    private float minDistanceToPlayer = 1.6f;
+    private float minDistanceToPlayer = 2.6f;
 
     public SqueezeWall opposite;
 
@@ -47,11 +47,10 @@ public class SqueezeWall : MonoBehaviour, ISwitchable {
         // check minimum distance to player
         if (Mathf.Abs(transform.position.z - fpsC.transform.position.z + stepWidth) > minDistanceToPlayer) {
             // wall can follows if min distance
-            Vector3 newPosition = GetNewPositionBySetting();
+            Vector3 newPosition = GetNewPositionByLerping(speed);
             transform.position = newPosition;
         }
-        else {
-            // pushing is allowed
+        else { // pushing is allowed
             Vector3 newPosition = GetNewPositionByMoving(-speed);
             transform.position = newPosition;
         }
@@ -68,7 +67,17 @@ public class SqueezeWall : MonoBehaviour, ISwitchable {
         return newPosition;
     }
 
-    // walls approach by a certain speed
+    // walls approach by a certain speed - using Lerp (the missuse with a constant t decreases the speed of the wall when it approaches the player)
+    private Vector3 GetNewPositionByLerping(float wallSpeed) {
+        Vector3 newPosition = Vector3.Lerp(transform.position, new Vector3(transform.position.x, transform.position.y, fpsC.transform.position.z - stepWidth), Time.deltaTime * wallSpeed);
+        // only move if the wall would remain between min an max values - adding ((Time.deltaTime * speed) + minMaxTolerance) do prevent dead lock
+        if (newPosition.z < min || newPosition.z > max)
+            return transform.position;
+
+        return newPosition;
+    }
+
+    // walls approach by a certain speed - using MoveTorwards
     private Vector3 GetNewPositionByMoving(float wallSpeed) {
         Vector3 newPosition = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, fpsC.transform.position.z - stepWidth), Time.deltaTime * wallSpeed);
         // only move if the wall would remain between min an max values - adding ((Time.deltaTime * speed) + minMaxTolerance) do prevent dead lock

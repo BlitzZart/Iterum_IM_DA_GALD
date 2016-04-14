@@ -186,6 +186,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &136172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 497334}
+  - 167: {fileID: 16717642}
+  m_Layer: 0
+  m_Name: Reverb Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &146526
 GameObject:
   m_ObjectHideFlags: 1
@@ -725,8 +741,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125412}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: 0.5125096, y: -10.622396, z: -0.7085861}
-  m_LocalScale: {x: 0.5, y: 1.4999998, z: 0.45399666}
+  m_LocalPosition: {x: 0.51, y: -10.622, z: -0.78878}
+  m_LocalScale: {x: 0.5, y: 1.4999998, z: 1.2060395}
   m_Children: []
   m_Father: {fileID: 424044}
   m_RootOrder: 1
@@ -737,7 +753,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197780}
   m_LocalRotation: {x: 0, y: -0.20930956, z: 0, w: 0.9778494}
-  m_LocalPosition: {x: 0.03042269, y: 1.6280001, z: 1.7941755}
+  m_LocalPosition: {x: 0.181, y: 1.6280001, z: 1.7941755}
   m_LocalScale: {x: 0.124292165, y: 0.26400003, z: 0.18634848}
   m_Children:
   - {fileID: 478520}
@@ -785,6 +801,7 @@ Transform:
   - {fileID: 472430}
   - {fileID: 452328}
   - {fileID: 452052}
+  - {fileID: 497334}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &477470
@@ -890,6 +907,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 452052}
   m_RootOrder: 0
+--- !u!4 &497334
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.254, y: -0.24, z: 0.77}
+  m_LocalScale: {x: 0.10865238, y: 0.2, z: 0.20198826}
+  m_Children: []
+  m_Father: {fileID: 476972}
+  m_RootOrder: 6
 --- !u!23 &2303922
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -1712,6 +1741,30 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!167 &16717642
+AudioReverbZone:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136172}
+  m_Enabled: 1
+  m_MinDistance: 10.1
+  m_MaxDistance: 11
+  m_ReverbPreset: 12
+  m_Room: -1000
+  m_RoomHF: -4000
+  m_DecayTime: 0.3
+  m_DecayHFRatio: 0.1
+  m_Reflections: -1831
+  m_ReflectionsDelay: 0.002
+  m_Reverb: -1630
+  m_ReverbDelay: 0.03
+  m_HFReference: 5000
+  m_RoomRolloffFactor: 0
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
 --- !u!193 &19351086
 Tree:
   m_ObjectHideFlags: 1
