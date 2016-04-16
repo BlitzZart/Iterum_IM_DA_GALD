@@ -227,7 +227,7 @@ public class MeshDeformer : MonoBehaviour, ISwitchable {
     // use this to deactivate the mesh deformer delayed
     // so the mesh can relax when the player is gone
     IEnumerator DeactivateDelayed() {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
         // set mesh deformer inactive
         this.enabled = false;
     }
@@ -248,7 +248,7 @@ public class MeshDeformer : MonoBehaviour, ISwitchable {
     }
 
     public void DeActivate() {
-        DeactivateDelayed();
+        StartCoroutine(DeactivateDelayed());
     }
 
     public void Switch() {
