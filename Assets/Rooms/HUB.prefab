@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 417762}
   - 114: {fileID: 11486044}
+  - 114: {fileID: 11418088}
   m_Layer: 0
   m_Name: TelePorterOneWay_HubToTheDoor
   m_TagString: Untagged
@@ -28,7 +29,7 @@ GameObject:
   - 64: {fileID: 6470928}
   - 23: {fileID: 2347366}
   m_Layer: 0
-  m_Name: Wall (1)
+  m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +44,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 463610}
   m_Layer: 0
-  m_Name: Walls (1)
+  m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +62,7 @@ GameObject:
   - 64: {fileID: 6403728}
   - 23: {fileID: 2383876}
   m_Layer: 0
-  m_Name: Floor (1)
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +77,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 489496}
   m_Layer: 0
-  m_Name: Floor (1)
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +95,7 @@ GameObject:
   - 64: {fileID: 6469712}
   - 23: {fileID: 2394482}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,7 +145,7 @@ GameObject:
   - 23: {fileID: 2396688}
   - 114: {fileID: 11464784}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: BackWall_Entrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +165,7 @@ GameObject:
   - 114: {fileID: 11449854}
   - 114: {fileID: 11440834}
   m_Layer: 0
-  m_Name: Start
+  m_Name: Start_To_Sqeezer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,7 +250,7 @@ GameObject:
   - 4: {fileID: 466086}
   - 108: {fileID: 10886658}
   m_Layer: 0
-  m_Name: Point light (1)
+  m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,7 +270,7 @@ GameObject:
   - 114: {fileID: 11401638}
   - 114: {fileID: 11448158}
   m_Layer: 0
-  m_Name: Start
+  m_Name: Start_To_TheDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,9 +306,10 @@ GameObject:
   - 33: {fileID: 3346068}
   - 64: {fileID: 6448494}
   - 23: {fileID: 2325298}
-  - 114: {fileID: 11431806}
+  - 114: {fileID: 11419694}
+  - 114: {fileID: 11473594}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: FrontWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,8 +368,8 @@ Transform:
   m_LocalPosition: {x: 37.280003, y: -4.37, z: -18.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 436044}
   - {fileID: 426566}
+  - {fileID: 436044}
   m_Father: {fileID: 410688}
   m_RootOrder: 5
 --- !u!4 &426566
@@ -381,7 +383,7 @@ Transform:
   m_LocalScale: {x: 1.2, y: 2.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 417762}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &427798
 Transform:
   m_ObjectHideFlags: 1
@@ -401,7 +403,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.7, y: -0.1, z: 31}
+  m_LocalPosition: {x: -35.1, y: -0.1, z: 25.32}
   m_LocalScale: {x: 1.2, y: 2.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 429094}
@@ -431,7 +433,7 @@ Transform:
   m_LocalScale: {x: 1.2, y: 2.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 417762}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &448006
 Transform:
   m_ObjectHideFlags: 1
@@ -582,7 +584,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: f4d5873400d2d77469491e0534ffb8ad, type: 2}
+  - {fileID: 2100000, guid: 562ebfbc3c8352447bbc7a4a2820aaf3, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1073,20 +1075,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775f95a1ecf22e4a81eaf0b8e6d3790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11431806
+--- !u!114 &11418088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a5901cd9e57494bb77c41d700d1626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNumber: 1
+--- !u!114 &11419694
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198892}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d18e9890dfd3e6b45b4a693cc346c3f2, type: 3}
+  m_Script: {fileID: 11500000, guid: a832c1cc6bc2e5949a796b98d09f939b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 43.5
-  min: 10
-  opposite: {fileID: 11431806}
 --- !u!114 &11440834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1133,7 +1144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max: 37
   min: 7.9
-  opposite: {fileID: 11431806}
+  opposite: {fileID: 0}
 --- !u!114 &11466760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1147,6 +1158,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 143076}
   goal: {fileID: 190194}
+--- !u!114 &11473594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85812127c91b44e4f8659448da60538c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solidDeformation: 1
+  relaxMesh: 0
+  reactOnPlayerDistance: 1
+  reactionDistance: 5.38
+  power: 5
+  fftPower: 1
+  randomPower: 4
+  speed: 0.3
+  rate: 0.3
 --- !u!114 &11478856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1191,14 +1222,14 @@ AudioReverbZone:
   m_Enabled: 1
   m_MinDistance: 23.6
   m_MaxDistance: 24.7
-  m_ReverbPreset: 1
+  m_ReverbPreset: 13
   m_Room: -1000
-  m_RoomHF: -100
+  m_RoomHF: -300
   m_DecayTime: 1.49
-  m_DecayHFRatio: 0.83
-  m_Reflections: -2602
+  m_DecayHFRatio: 0.59
+  m_Reflections: -1219
   m_ReflectionsDelay: 0.007
-  m_Reverb: 200
+  m_Reverb: 441
   m_ReverbDelay: 0.011
   m_HFReference: 5000
   m_RoomRolloffFactor: 0

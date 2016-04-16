@@ -51,15 +51,16 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &117132
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 449948}
   - 114: {fileID: 11473476}
+  - 114: {fileID: 11429400}
   m_Layer: 0
-  m_Name: TelePorterOneWay
+  m_Name: TeleOneWay_TheDoors_To_Hub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,7 +245,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &156984
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -384,6 +385,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 422122}
+  - {fileID: 449948}
   m_Father: {fileID: 444948}
   m_RootOrder: 0
 --- !u!4 &439040
@@ -397,7 +399,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 443532}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!4 &442212
 Transform:
   m_ObjectHideFlags: 1
@@ -432,13 +434,13 @@ Transform:
   m_LocalPosition: {x: 24, y: 5.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 459798}
   - {fileID: 464312}
   - {fileID: 498094}
   - {fileID: 439040}
   - {fileID: 492674}
   - {fileID: 449192}
   - {fileID: 444948}
-  - {fileID: 449948}
   - {fileID: 491296}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -456,7 +458,7 @@ Transform:
   - {fileID: 480646}
   - {fileID: 473672}
   m_Father: {fileID: 443532}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!4 &446186
 Transform:
   m_ObjectHideFlags: 1
@@ -464,8 +466,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.18, y: 0, z: 25.4}
-  m_LocalScale: {x: 1.2, y: 2.2, z: 1.2}
+  m_LocalPosition: {x: 5.5599976, y: 6.299999, z: 25.4}
+  m_LocalScale: {x: 2.2, y: 1.1999999, z: 1.2}
   m_Children: []
   m_Father: {fileID: 449948}
   m_RootOrder: 0
@@ -480,21 +482,20 @@ Transform:
   m_LocalScale: {x: 2.5, y: 5.1344943, z: 2.5}
   m_Children: []
   m_Father: {fileID: 443532}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!4 &449948
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117132}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.080002, y: -4.37, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: -1.7199974, y: 25.119999, z: -3.7799964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 446186}
-  - {fileID: 459798}
-  m_Father: {fileID: 443532}
-  m_RootOrder: 6
+  m_Father: {fileID: 429374}
+  m_RootOrder: 1
 --- !u!4 &455552
 Transform:
   m_ObjectHideFlags: 1
@@ -514,11 +515,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.07, y: 0, z: 9.31}
+  m_LocalPosition: {x: -26.989998, y: -4.37, z: 9.31}
   m_LocalScale: {x: 1.2, y: 2.2, z: 1.2}
   m_Children: []
-  m_Father: {fileID: 449948}
-  m_RootOrder: 1
+  m_Father: {fileID: 443532}
+  m_RootOrder: 0
 --- !u!4 &464312
 Transform:
   m_ObjectHideFlags: 1
@@ -532,7 +533,7 @@ Transform:
   - {fileID: 442776}
   - {fileID: 442212}
   m_Father: {fileID: 443532}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &473672
 Transform:
   m_ObjectHideFlags: 1
@@ -592,7 +593,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 443532}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!4 &498094
 Transform:
   m_ObjectHideFlags: 1
@@ -607,7 +608,7 @@ Transform:
   - {fileID: 455552}
   - {fileID: 410804}
   m_Father: {fileID: 443532}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!23 &2300392
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -1240,6 +1241,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerA: {fileID: 11491584}
   triggerB: {fileID: 11463512}
+--- !u!114 &11429400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a5901cd9e57494bb77c41d700d1626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNumber: 1
 --- !u!114 &11435854
 MonoBehaviour:
   m_ObjectHideFlags: 1

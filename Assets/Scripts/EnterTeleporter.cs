@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class EnterTeleporter : MonoBehaviour {
     void OnTriggerEnter(Collider other) {

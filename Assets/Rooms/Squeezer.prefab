@@ -62,6 +62,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 402224}
   - 114: {fileID: 11460728}
+  - 114: {fileID: 11414880}
   m_Layer: 0
   m_Name: TelePorterOneWay
   m_TagString: Untagged
@@ -354,7 +355,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 29.6}
+  m_LocalPosition: {x: 0, y: 0, z: 33.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 446054}
@@ -601,8 +602,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.344}
-  m_LocalScale: {x: 0.45679998, y: 0.8, z: 0.12940891}
+  m_LocalPosition: {x: 0, y: 0, z: 2.231}
+  m_LocalScale: {x: 0.45679998, y: 0.8, z: 0.41167602}
   m_Children: []
   m_Father: {fileID: 471426}
   m_RootOrder: 2
@@ -1200,6 +1201,18 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11414880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a5901cd9e57494bb77c41d700d1626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageNumber: 2
 --- !u!114 &11416160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1331,17 +1344,17 @@ AudioReverbZone:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141790}
   m_Enabled: 1
-  m_MinDistance: 45.9
-  m_MaxDistance: 45.9
-  m_ReverbPreset: 1
+  m_MinDistance: 49.08
+  m_MaxDistance: 51.6
+  m_ReverbPreset: 11
   m_Room: -1000
-  m_RoomHF: -100
-  m_DecayTime: 1.49
-  m_DecayHFRatio: 0.83
-  m_Reflections: -2602
-  m_ReflectionsDelay: 0.007
-  m_Reverb: 200
-  m_ReverbDelay: 0.011
+  m_RoomHF: -1000
+  m_DecayTime: 10.05
+  m_DecayHFRatio: 0.23
+  m_Reflections: -602
+  m_ReflectionsDelay: 0.02
+  m_Reverb: 198
+  m_ReverbDelay: 0.03
   m_HFReference: 5000
   m_RoomRolloffFactor: 0
   m_Diffusion: 100

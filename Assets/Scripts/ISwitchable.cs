@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-[SerializeField]
 public interface ISwitchable {
 
     void Activate();
