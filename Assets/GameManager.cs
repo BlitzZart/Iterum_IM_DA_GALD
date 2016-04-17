@@ -4,6 +4,14 @@ using System.Collections.Generic;
 
 
 public class GameManager : MonoBehaviour {
+    private static GameManager instance;
+    public static GameManager Instance {
+        get { return instance; }
+    }
+
+    public delegate void Game(int stageNumber);
+    public static event Game StageChange;
+
 
     public int currentStage = 0;
 
@@ -20,7 +28,10 @@ public class GameManager : MonoBehaviour {
     private List<List<GameObject>> allOn;
     private List<List<GameObject>> allOff;
 
-    // Use this for initialization
+    void Awake() {
+        instance = this;
+    }
+
     void Start() {
         allOn = new List<List<GameObject>>();
         allOff = new List<List<GameObject>>();
@@ -44,6 +55,10 @@ public class GameManager : MonoBehaviour {
 
     public void StageFinished(int stageNumber) {
         DisableAndEnable(stageNumber);
+
+        if (StageChange != null) {
+            StageChange(stageNumber);
+        }
     }
 
     // if go is ISWITCH, use it. Ohtwerwise - gameObject.enabled = false;
