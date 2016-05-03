@@ -42,6 +42,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        public void SetRotataion(Quaternion rot) {
+            m_Camera.transform.rotation = rot;
+        }
+
         // Use this for initialization
         private void Start()
         {
