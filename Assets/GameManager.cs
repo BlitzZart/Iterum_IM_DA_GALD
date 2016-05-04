@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour {
     public List<GameObject> stage2DoneOff;
     public List<GameObject> stage3DoneOn;
     public List<GameObject> stage3DoneOff;
+    public List<GameObject> stage4DoneOn;
+    public List<GameObject> stage4DoneOff;
 
     private List<List<GameObject>> allOn;
     private List<List<GameObject>> allOff;
@@ -39,10 +41,12 @@ public class GameManager : MonoBehaviour {
         allOn.Add(stage1DoneOn);
         allOn.Add(stage2DoneOn);
         allOn.Add(stage3DoneOn);
+        allOn.Add(stage4DoneOn);
 
         allOff.Add(stage1DoneOff);
         allOff.Add(stage2DoneOff);
         allOff.Add(stage3DoneOff);
+        allOff.Add(stage4DoneOff);
 
         StartFirstStage();
 

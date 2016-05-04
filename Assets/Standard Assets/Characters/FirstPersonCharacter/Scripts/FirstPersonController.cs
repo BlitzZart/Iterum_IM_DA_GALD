@@ -46,6 +46,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Camera.transform.rotation = rot;
         }
 
+        public void SetMoveDir(Vector3 dir) {
+            m_MoveDir = dir;
+        }
+
         // Use this for initialization
         private void Start()
         {

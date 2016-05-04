@@ -1,26 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class TeleportManipulatePlayer : MonoBehaviour {
 
     void TeleporterEntered(GameObject player)
     {
-        Rigidbody body = player.GetComponent<Rigidbody>();
+        FirstPersonController fpsC = player.GetComponent<FirstPersonController>();
 
-        if (body != null)
+        if (fpsC != null)
         {
-            body.velocity = Vector3.zero;
+            fpsC.SetMoveDir(Vector3.zero);
         }
-
     }
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
