@@ -24,14 +24,17 @@ public class BridgeOfFaith : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+        /// ---- was used for first iteration of bridge
         // check if bridge is visible and beliver is assigned
-        if (isVisible || believer == null)
-            return;
+        //if (isVisible || believer == null)
+        //    return;
+        //if (checkLookDirection && !backCheck.IsVisible)
+        //    return;
+        /// ---- 
 
-        if (checkLookDirection && !backCheck.IsVisible)
-            return;
-
-        transform.position = new Vector3(believer.position.x, initPosition.y, believer.position.z);
+        if (believer != null)
+            transform.position = new Vector3(believer.position.x, initPosition.y, believer.position.z);
     }
 
     void MsgPlayerEntered(GameObject player)
@@ -41,7 +44,7 @@ public class BridgeOfFaith : MonoBehaviour {
 
     void MsgPlayerLeft()
     {
-        believer = null;
+        //believer = null;
     }
     void OnWillRenderObject()
     {
