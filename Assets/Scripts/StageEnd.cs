@@ -7,9 +7,14 @@ public class StageEnd : MonoBehaviour {
 
     public int stageNumber = 0;
     
-    public void FireEndEvent() {
-        if (EndOfStage != null)
-            EndOfStage(stageNumber);
+    // receiving messages from child
+    void MsgStageEnd() {
+        FireEndEvent();
     }
-     
+
+    public void FireEndEvent() {
+        if (EndOfStage != null) {
+            EndOfStage(stageNumber);
+        }
+    }
 }

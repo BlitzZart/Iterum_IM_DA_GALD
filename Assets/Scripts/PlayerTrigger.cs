@@ -3,14 +3,19 @@ using System.Collections;
 
 public class PlayerTrigger : MonoBehaviour {
 
+    public bool sendStageEndMessage = false;
+
     void PlayerEntered(GameObject other)
     {
-        SendMessageUpwards("MsgPlayerEntered", other);
+        SendMessageUpwards("MsgPlayerEntered", other, SendMessageOptions.DontRequireReceiver);
+        if (sendStageEndMessage) {
+            SendMessageUpwards("MsgStageEnd", other, SendMessageOptions.DontRequireReceiver);
+        }
     }
 
     void PlayerLeft()
     {
-        SendMessageUpwards("MsgPlayerLeft");
+        SendMessageUpwards("MsgPlayerLeft", SendMessageOptions.DontRequireReceiver);
     }
 
     void OnTriggerEnter(Collider other)
