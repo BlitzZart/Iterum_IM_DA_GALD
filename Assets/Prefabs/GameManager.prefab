@@ -43,15 +43,39 @@ MonoBehaviour:
   enableOnStart: []
   disableOnStart:
   - {fileID: 0}
+  - {fileID: 0}
   stage1DoneOn:
   - {fileID: 0}
   stage1DoneOff:
   - {fileID: 0}
-  stage2DoneOn: []
+  stage2DoneOn:
+  - {fileID: 0}
+  - {fileID: 0}
   stage2DoneOff:
   - {fileID: 0}
-  stage3DoneOn: []
-  stage3DoneOff: []
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  stage3DoneOn:
+  - {fileID: 0}
+  - {fileID: 0}
+  stage3DoneOff:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  stage4DoneOn:
+  - {fileID: 0}
+  stage4DoneOff:
+  - {fileID: 0}
+  - {fileID: 0}
+  stage5DoneOn: []
+  stage5DoneOff: []
+  stage6DoneOn: []
+  stage6DoneOff: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

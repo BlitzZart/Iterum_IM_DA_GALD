@@ -223,7 +223,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 410688}
   m_Layer: 0
-  m_Name: HUB
+  m_Name: HUB_Old
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

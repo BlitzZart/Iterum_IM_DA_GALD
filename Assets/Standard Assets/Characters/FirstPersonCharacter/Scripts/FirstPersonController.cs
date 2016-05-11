@@ -10,6 +10,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
+        public void SlowSpeed(float speed) {
+            m_WalkSpeed = speed;
+            m_RunSpeed = speed;
+            m_JumpSpeed = 0;
+            m_MouseLook.smooth = true;
+        }
+
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;

@@ -12,6 +12,7 @@ namespace Triggers {
 
         // event fired by sequenced triggers
         void Triggered(TriggerType entered) {
+            print("triggered");
             // entered the same againw
             if (entered == lastTrigger)
                 return;

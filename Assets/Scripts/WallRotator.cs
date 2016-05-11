@@ -13,6 +13,7 @@ public class WallRotator : MonoBehaviour {
     }
 
     void TriggerChanged(TriggerType changedTo) {
+        print("TriggerChanged");
         if (changedTo == TriggerType.A) { // CCW
             wall.transform.Rotate(0, runingCW, 0, Space.Self);
         }

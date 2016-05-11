@@ -92,7 +92,7 @@ public class MeshDeformer : MonoBehaviour, ISwitchable {
     float[] offsets;
 
     [Header("Overall power of deformation")]
-    [Range(0.0f, 10)]
+    [Range(0.0f, 50)]
     public float power = 1.0f;
     [Header("Influence of FFT")]
     [Range(0.0f, 2)]
