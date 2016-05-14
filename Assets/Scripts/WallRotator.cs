@@ -3,8 +3,8 @@ using Triggers;
 
 public class WallRotator : MonoBehaviour {
 
-    public int runingCW = 180;
-    public int runingCCW = 90;
+    private int runingCW = -90;
+    private int runingCCW = -90;
 
     public GameObject wall;
 
@@ -13,7 +13,6 @@ public class WallRotator : MonoBehaviour {
     }
 
     void TriggerChanged(TriggerType changedTo) {
-        print("TriggerChanged");
         if (changedTo == TriggerType.A) { // CCW
             wall.transform.Rotate(0, runingCW, 0, Space.Self);
         }

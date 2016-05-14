@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour {
         allOn = new List<List<GameObject>>();
         allOff = new List<List<GameObject>>();
 
+        allOn.Add(enableOnStart);
         allOn.Add(stage1DoneOn);
         allOn.Add(stage2DoneOn);
         allOn.Add(stage3DoneOn);
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour {
         allOn.Add(stage5DoneOn);
         allOn.Add(stage6DoneOn);
 
+        allOff.Add(disableOnStart);
         allOff.Add(stage1DoneOff);
         allOff.Add(stage2DoneOff);
         allOff.Add(stage3DoneOff);
@@ -64,10 +66,13 @@ public class GameManager : MonoBehaviour {
 
     private void StartFirstStage() {
         currentStage = 0;
+        StageFinished(0);
     }
 
     public void StageFinished(int stageNumber) {
         DisableAndEnable(stageNumber);
+
+        currentStage = stageNumber + 1;
 
         if (StageChange != null) {
             StageChange(stageNumber);
@@ -76,11 +81,11 @@ public class GameManager : MonoBehaviour {
 
     // if go is ISWITCH, use it. Ohtwerwise - gameObject.enabled = false;
     private void DisableAndEnable(int stage) {
-        if (stage <= 0) {
-            Debug.Log("Invalid stage number " + stage + ".");
-            return;
-        }
-        foreach (GameObject go in allOff[stage - 1]) {
+        //if (stage <= 0) {
+        //    Debug.Log("Invalid stage number " + stage + ".");
+        //    return;
+        //}
+        foreach (GameObject go in allOff[stage]) {
             ISwitchable iSwitch = go.GetComponent<ISwitchable>();
             if (iSwitch != null)
                 iSwitch.DeActivate();
@@ -88,7 +93,7 @@ public class GameManager : MonoBehaviour {
                 go.SetActive(false);
         }
 
-        foreach (GameObject go in allOn[stage - 1]) {
+        foreach (GameObject go in allOn[stage]) {
             ISwitchable iSwitch = go.GetComponent<ISwitchable>();
             if (iSwitch != null)
                 iSwitch.Activate();

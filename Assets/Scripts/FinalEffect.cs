@@ -7,7 +7,7 @@ public class FinalEffect : MonoBehaviour {
     Bloom bloom;
     bool fadeToWhite = false;
 
-    float fadeTime = 7;
+    float fadeTime = 13;
     float currentTime = 0;
 
 
