@@ -110,7 +110,7 @@ Material:
         first:
           name: _UpTex
         second:
-          m_Texture: {fileID: 2800000, guid: e4b564c6d3db1a54fa5a5eabfd75432d, type: 3}
+          m_Texture: {fileID: 2800000, guid: 26adf4afa0ba7a545aa9c7af52a035b6, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
