@@ -3,6 +3,8 @@ using System.Collections;
 
 public class RotateGlobe : MonoBehaviour {
 
+    public float rotationSpeed = 1.7f;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -10,6 +12,6 @@ public class RotateGlobe : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Rotate(0, 1.7f * Time.deltaTime, 0);
+        transform.RotateAround(transform.position, Vector3.up, rotationSpeed * Time.deltaTime);
 	}
 }

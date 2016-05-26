@@ -87,6 +87,10 @@ public class SqueezeWall : MonoBehaviour, ISwitchable {
         return newPosition;
     }
 
+    public void SetToMaxPosition() {
+        transform.position = new Vector3(transform.position.x, transform.position.y, max);
+    }
+
     public void Activate() {
         doSqueeze = true;
     }

@@ -7,12 +7,8 @@ public class FFT : MonoBehaviour {
     AudioSource audio;
     float[] spectrum = new float[64];
 
-    void Start()
-    {
-        if (audio != null) {
-            audio = GetComponent<AudioSource>();
-            audio.time = 30;
-        }
+    void Start() {
+        audio = GetComponent<AudioSource>();
 
         deformer = GetComponent<MeshDeformer>();
     }
@@ -32,7 +28,6 @@ public class FFT : MonoBehaviour {
             deformer.ArrayOffests(spectrum);
         }
 
-
         //DrawLines(spectrum);
     }
 
@@ -47,5 +42,13 @@ public class FFT : MonoBehaviour {
             Debug.DrawLine(new Vector3(Mathf.Log(i - 1), Mathf.Log(spectrum[i - 1]), 3), new Vector3(Mathf.Log(i), Mathf.Log(spectrum[i]), 3), Color.yellow);
             i++;
         }
+    }
+
+    private void PrintValues(float[] spectrum) {
+        string s = "";
+        for (int i = 0; i < spectrum.Length; i++) {
+            s += i + ": " + spectrum[i] + " ";
+        }
+        print(s);
     }
 }

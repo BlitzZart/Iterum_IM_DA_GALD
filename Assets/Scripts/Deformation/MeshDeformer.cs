@@ -95,7 +95,7 @@ public class MeshDeformer : MonoBehaviour, ISwitchable {
     [Range(0.0f, 50)]
     public float power = 1.0f;
     [Header("Influence of FFT")]
-    [Range(0.0f, 2)]
+    [Range(0.0f, 10)]
     public float fftPower = 1.0f;
     [Header("Noise floor")]
     [Range(0.0f, 10.0f)]
@@ -149,7 +149,16 @@ public class MeshDeformer : MonoBehaviour, ISwitchable {
     }
 
     public void ArrayOffests(float[] offsets) {
-        this.offsets = offsets;
+
+        this.offsets = ModifyFFT(offsets);
+    }
+
+    private float[] ModifyFFT(float[] s) {
+        for (int i = 0; i < s.Length; i++) {
+            s[i] *= 100;
+            s[i] = Mathf.Clamp(s[i], 0, 0.22f);
+        }
+        return s;
     }
 
     private float current = 0;
@@ -202,10 +211,17 @@ public class MeshDeformer : MonoBehaviour, ISwitchable {
         foreach (Vertex item in unique) {
             playerDistance = Vector3.Distance(playerPosition, item.oVertex);
 
+            float randInfluence;
+            if (randomPower > 0)
+                randInfluence = UnityEngine.Random.Range(-randomPower, randomPower);
+            else
+                randInfluence = 1;
+
+
             // calculate position of target vertex
-            item.tVertex =
+            item.tVertex = 
                 item.oVertex + item.normal *
-                UnityEngine.Random.Range(-randomPower, randomPower) *
+                randInfluence *
                 power *
                 (reactionDistance / playerDistance) *
                 (defaultVibration * Mathf.Clamp01(power) + offsets[i++ % offsets.Length] * fftPower);
