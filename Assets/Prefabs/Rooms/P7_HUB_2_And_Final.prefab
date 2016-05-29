@@ -102,7 +102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &110910
 GameObject:
   m_ObjectHideFlags: 1
@@ -298,6 +298,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 402770}
+  - 114: {fileID: 11434754}
   m_Layer: 0
   m_Name: Globe v02
   m_TagString: Untagged
@@ -524,6 +525,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &178724
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 486168}
+  m_Layer: 0
+  m_Name: TargetPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &180690
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +701,7 @@ Transform:
   - {fileID: 454722}
   - {fileID: 460640}
   m_Father: {fileID: 446104}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &403396
 Transform:
   m_ObjectHideFlags: 1
@@ -934,6 +950,7 @@ Transform:
   m_LocalPosition: {x: 13.61, y: -18.21, z: 3.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 486168}
   - {fileID: 402770}
   m_Father: {fileID: 412900}
   m_RootOrder: 3
@@ -1114,6 +1131,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447886}
   m_RootOrder: 6
+--- !u!4 &486168
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 446104}
+  m_RootOrder: 0
 --- !u!4 &489736
 Transform:
   m_ObjectHideFlags: 1
@@ -1781,7 +1810,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 35
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -2461,6 +2490,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4404f3a1b7da7346866432f59bd588b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11434754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab6b696be1e87542850c21b88e37d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11436546

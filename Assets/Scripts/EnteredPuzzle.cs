@@ -30,7 +30,7 @@ public class EnteredPuzzle : MonoBehaviour {
 
     void MsgPlayerEntered(GameObject player) {
         this.player = player;
-
+        print("GotMsg");
         if (doOnlyIfNotVisible) {
             sightCheckRenderer = sightCheck.GetComponent<Renderer>();
             InvokeRepeating("TryToApply", 0.1f, 0.1f);
@@ -40,6 +40,7 @@ public class EnteredPuzzle : MonoBehaviour {
     }
 
     void TryToApply() {
+        print("Try");
         if (!sightCheckRenderer.isVisible) {
             CancelInvoke("TryToApply");
             ApplyChanges();
@@ -60,6 +61,8 @@ public class EnteredPuzzle : MonoBehaviour {
     }
 
     void ApplyChanges() {
+
+        print("APPLY");
         ParentFPSC();
 
         foreach (GameObject item in toDeactivate)
