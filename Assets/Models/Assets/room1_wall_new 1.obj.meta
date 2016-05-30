@@ -1,22 +1,17 @@
 fileFormatVersion: 2
-guid: 48bee8b2dc278a04aa17cb791835e633
-timeCreated: 1464190046
+guid: f69739b8d49a47c4c9029ed839aa04ed
+timeCreated: 1464553364
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: pPlane1
-    100002: pSphere1
-    100004: //RootNode
-    400000: pPlane1
-    400002: pSphere1
-    400004: //RootNode
-    2300000: pPlane1
-    2300002: pSphere1
-    3300000: pPlane1
-    3300002: pSphere1
-    4300000: pPlane1
-    4300002: pSphere1
+    100000: pCube55_room1
+    100002: //RootNode
+    400000: pCube55_room1
+    400002: //RootNode
+    2300000: pCube55_room1
+    3300000: pCube55_room1
+    4300000: pCube55_room1
   materials:
     importMaterials: 1
     materialName: 0
@@ -41,7 +36,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.8
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

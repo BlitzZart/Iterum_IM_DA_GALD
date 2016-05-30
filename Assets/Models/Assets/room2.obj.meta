@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: aa43cfa97a4152a4fa5c386eb45eea1a
-timeCreated: 1464323754
+guid: fbca09c6ca32dc4459be8009ffe8efae
+timeCreated: 1464551937
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: pCube55_room1
+    100000: pCube61_room2
     100002: //RootNode
-    400000: pCube55_room1
+    400000: pCube61_room2
     400002: //RootNode
-    2300000: pCube55_room1
-    3300000: pCube55_room1
-    4300000: pCube55_room1
+    2300000: pCube61_room2
+    3300000: pCube61_room2
+    4300000: pCube61_room2
   materials:
     importMaterials: 1
     materialName: 0
