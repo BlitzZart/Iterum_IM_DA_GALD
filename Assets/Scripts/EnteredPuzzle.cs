@@ -47,6 +47,10 @@ public class EnteredPuzzle : MonoBehaviour {
 
     void ParentFPSC() {
         if (parentPlayerToGameObject) {
+            //PlayerHome.Instance.transform.position = player.transform.position;
+            //player.transform.position = new Vector3(0, player.transform.position.y, 0);
+            //PlayerHome.Instance.transform.rotation = transform.parent.rotation;
+
             player.transform.parent = transform.parent;
         }
         else {
