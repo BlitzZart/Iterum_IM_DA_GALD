@@ -13,5 +13,8 @@ public class SqueezerEndState : MonoBehaviour {
         foreach(SqueezeWall wall in walls) {
             wall.DeActivate();
         }
+
+        // push back wall
+        walls[1].transform.Translate(0, -2, 0);
     }
 }

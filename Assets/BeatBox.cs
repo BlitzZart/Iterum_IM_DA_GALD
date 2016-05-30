@@ -6,6 +6,7 @@ public class BeatBox : MonoBehaviour {
 
     public float volume = 0.6f;
     public AudioClip ambExplore, ambDrama;
+    public AudioClip fx01;
 
     private AudioClip nextClip;
     private AudioSource source;
@@ -30,17 +31,20 @@ public class BeatBox : MonoBehaviour {
 
         if (stageNumber == 4 && source.clip != ambDrama)
             StartFadeOutAndIn(ambDrama, 1.3f);
+
+        if (stageNumber == 5)
+            AudioSource.PlayClipAtPoint(fx01, transform.position, 0.6f);
+
+        //if (stageNumber == 6)
+        //    AudioSource.PlayClipAtPoint(fx01, transform.position, 0.6f);
+
     }
 
     // Update is called once per frame
     void Update() {
-
-
         CrossFade();
-
     }
 
-    // TODO: call on certain stage
     public void StartFadeOutAndIn(AudioClip clip, float durateion) {
         fadeDuration = durateion;
         currentTime = fadeDuration;
