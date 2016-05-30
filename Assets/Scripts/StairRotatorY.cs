@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Triggers;
 
-public class WallRotator : MonoBehaviour {
+public class StairRotatorY : MonoBehaviour {
 
     private int runingCW = 90;
     private int runingCCW = 90;
@@ -14,10 +14,10 @@ public class WallRotator : MonoBehaviour {
 
     void TriggerChanged(TriggerType changedTo) {
         if (changedTo == TriggerType.A) { // CCW
-            wall.transform.Rotate(0, 0, runingCW, Space.Self);
+            wall.transform.Rotate(0, runingCW, 0, Space.Self);
         }
         else if (changedTo == TriggerType.B) { // CW
-            wall.transform.Rotate(0, 0, runingCCW, Space.Self);
+            wall.transform.Rotate(0, runingCW, 0, Space.Self);
         }
     }
 }
