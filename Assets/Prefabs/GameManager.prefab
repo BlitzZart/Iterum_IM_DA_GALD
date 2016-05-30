@@ -39,12 +39,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322d5ba2a5f12884b8f40e0c7ad3ad07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentStage: 0
+  currentStage: 5
   enableOnStart: []
   disableOnStart:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   stage1DoneOn:
+  - {fileID: 0}
   - {fileID: 0}
   stage1DoneOff:
   - {fileID: 0}
@@ -55,13 +60,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   stage3DoneOn:
   - {fileID: 0}
   - {fileID: 0}
-  stage3DoneOff:
   - {fileID: 0}
+  - {fileID: 0}
+  stage3DoneOff:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -71,10 +75,12 @@ MonoBehaviour:
   - {fileID: 0}
   stage4DoneOff:
   - {fileID: 0}
-  - {fileID: 0}
   stage5DoneOn: []
-  stage5DoneOff: []
-  stage6DoneOn: []
+  stage5DoneOff:
+  - {fileID: 0}
+  - {fileID: 0}
+  stage6DoneOn:
+  - {fileID: 0}
   stage6DoneOff: []
 --- !u!1001 &100100000
 Prefab:
