@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 0e81b2ab36742af469a02330bcf3a0a9
-timeCreated: 1464685547
+guid: e3a1cd40539f42345a422a9bc26521e5
+timeCreated: 1464688377
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: hubtube5_hub
+    100002: hubtube5
     400000: //RootNode
-    400002: hubtube5_hub
-    2300000: hubtube5_hub
-    3300000: hubtube5_hub
-    4300000: hubtube5_hub
+    400002: hubtube5
+    2300000: hubtube5
+    3300000: hubtube5
+    4300000: hubtube5
   materials:
     importMaterials: 1
     materialName: 0

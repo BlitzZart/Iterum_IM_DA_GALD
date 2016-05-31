@@ -25,6 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 496338}
   - 114: {fileID: 11483918}
+  - 114: {fileID: 11421264}
   m_Layer: 0
   m_Name: MoveRoom_Squeezer
   m_TagString: Untagged
@@ -284,7 +285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &135188
 GameObject:
   m_ObjectHideFlags: 1
@@ -456,7 +457,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 484050}
-  - 114: {fileID: 11499616}
   - 114: {fileID: 11447938}
   m_Layer: 0
   m_Name: EndOf_Squeezer
@@ -1030,8 +1030,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.8534628}
+  m_LocalPosition: {x: 0, y: -0, z: 0.006}
+  m_LocalScale: {x: 1, y: 1, z: 0.7721302}
   m_Children: []
   m_Father: {fileID: 408070}
   m_RootOrder: 0
@@ -1096,7 +1096,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.9, y: 5.59, z: 41}
+  m_LocalPosition: {x: 19.82, y: 5.587, z: 42.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 404686}
@@ -2434,11 +2434,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133892}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bde874b4624df64eb04b012e9fdeed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wallStart: {fileID: 0}
+  wallAhead: {fileID: 0}
 --- !u!114 &11411158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2487,6 +2489,19 @@ MonoBehaviour:
   max: 150
   min: 6
   opposite: {fileID: 11418046}
+--- !u!114 &11421264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bde874b4624df64eb04b012e9fdeed5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallStart: {fileID: 11475990}
+  wallAhead: {fileID: 11489456}
 --- !u!114 &11422980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2691,19 +2706,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f53c007bdee9904a8e9aead943bd336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitPosition: {x: 19.9, y: 5.59, z: 41}
+  InitPosition: {x: 19.82, y: 5.587, z: 42.5}
   GotoPosition: {x: -52.6, y: 5.59, z: 15.11}
---- !u!114 &11499616
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bde874b4624df64eb04b012e9fdeed5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11499628
 MonoBehaviour:
   m_ObjectHideFlags: 1
