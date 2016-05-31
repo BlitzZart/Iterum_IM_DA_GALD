@@ -30,7 +30,7 @@ public class ThePaintingLogic : MonoBehaviour {
         // try some perspective correction
         Vector3 camPos = paintingCam.transform.position;
         //camPos.z = camPos.z - (camPos.z - Camera.main.transform.position.z) * 3;
-        paintingCam.transform.Rotate(0, (camPos.z - Camera.main.transform.position.z) * -17.0f, 0);
+        //paintingCam.transform.Rotate(0, (camPos.z - Camera.main.transform.position.z) * -17.0f, 0);
 
         paintingCam.transform.position = camPos;
 

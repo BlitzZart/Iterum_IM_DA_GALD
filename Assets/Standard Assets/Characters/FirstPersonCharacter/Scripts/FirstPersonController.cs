@@ -13,7 +13,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void SlowSpeed(float speed) {
             m_WalkSpeed = speed;
             m_RunSpeed = speed;
-            m_JumpSpeed = 0;
+            //m_JumpSpeed = 0;
             m_MouseLook.smooth = true;
         }
 
