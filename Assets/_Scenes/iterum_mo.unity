@@ -2050,6 +2050,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 528700822}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &536702448 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11475990, guid: c96b958255835744098d6e0750a32e6e,
+    type: 2}
+  m_PrefabInternal: {fileID: 956050445}
+  m_Script: {fileID: 11500000, guid: d18e9890dfd3e6b45b4a693cc346c3f2, type: 3}
 --- !u!1 &556939525 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 167008, guid: 38cdc51dce1b362498445dbb2c858e25, type: 2}
@@ -3910,7 +3916,28 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11408366, guid: c96b958255835744098d6e0750a32e6e, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439998, guid: c96b958255835744098d6e0750a32e6e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439998, guid: c96b958255835744098d6e0750a32e6e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 439998, guid: c96b958255835744098d6e0750a32e6e, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.7721302
+      objectReference: {fileID: 0}
+    - target: {fileID: 439998, guid: c96b958255835744098d6e0750a32e6e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11499616, guid: c96b958255835744098d6e0750a32e6e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c96b958255835744098d6e0750a32e6e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &964392870
@@ -5023,6 +5050,12 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &1179292875 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11489456, guid: c96b958255835744098d6e0750a32e6e,
+    type: 2}
+  m_PrefabInternal: {fileID: 956050445}
+  m_Script: {fileID: 11500000, guid: d18e9890dfd3e6b45b4a693cc346c3f2, type: 3}
 --- !u!1001 &1199399259
 Prefab:
   m_ObjectHideFlags: 0
@@ -6046,6 +6079,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bde874b4624df64eb04b012e9fdeed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wallStart: {fileID: 536702448}
+  wallAhead: {fileID: 1179292875}
 --- !u!1 &1432823766
 GameObject:
   m_ObjectHideFlags: 0
