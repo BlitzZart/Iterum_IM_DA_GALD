@@ -635,7 +635,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.702, y: 1.778, z: 34.896}
+  m_LocalPosition: {x: -26.782, y: 1.775, z: 36.4}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 432526}
@@ -971,7 +971,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: e14c42ef51c64b14182a681d85fe4402, type: 2}
+  - {fileID: 2100000, guid: bd7a53e02ba7cf143b64b6314f14f9a3, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1023,7 +1023,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: f4d5873400d2d77469491e0534ffb8ad, type: 2}
+  - {fileID: 2100000, guid: 4727fbe35ec6cf54291702bd50fac3d9, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1432,8 +1432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f53c007bdee9904a8e9aead943bd336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitPosition: {x: -21.702, y: 1.778, z: 34.896}
-  GotoPosition: {x: 5.55, y: 1.778, z: -0.434}
+  InitPosition: {x: -26.782, y: 1.775, z: 36.4}
+  GotoPosition: {x: 2.74, y: 1.778, z: -0.434}
 --- !u!114 &11422516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1503,7 +1503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentPlayerToGameObject: 1
-  targetPosition: {x: 5.55, y: 1.778, z: -0.434}
+  targetPosition: {x: 2.74, y: 1.778, z: -0.434}
   targetRotation: 90
   sightCheck: {fileID: 143286}
   toDeactivate: []
@@ -1522,7 +1522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentPlayerToGameObject: 1
-  targetPosition: {x: -21.702, y: 1.778, z: 34.896}
+  targetPosition: {x: -26.782, y: 1.775, z: 36.4}
   targetRotation: 0
   sightCheck: {fileID: 123142}
   toDeactivate:
