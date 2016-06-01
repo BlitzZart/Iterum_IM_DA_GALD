@@ -13,7 +13,7 @@ GameObject:
   - 92: {fileID: 9247174}
   - 114: {fileID: 11434382}
   - 114: {fileID: 11403646}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: PaintingCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.752, y: 0, z: -0.351}
+  m_LocalPosition: {x: -1.362, y: 0.498, z: -0.106}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 432038}
@@ -93,8 +93,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60.5, y: 93.8, z: 32.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -61.7, y: 99.227, z: 34.5}
+  m_LocalScale: {x: 1.08, y: 1.08, z: 1.08}
   m_Children:
   - {fileID: 454762}
   - {fileID: 441400}
@@ -108,8 +108,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190424}
   m_LocalRotation: {x: 0.5, y: -0.5000001, z: 0.5, w: 0.49999994}
-  m_LocalPosition: {x: 0.59272766, y: 1.131, z: -0.08691406}
-  m_LocalScale: {x: 0.44500783, y: 0.44500738, z: 0.44500738}
+  m_LocalPosition: {x: 0.453, y: 1.131, z: 0}
+  m_LocalScale: {x: 0.44404554, y: 0.44404513, z: 0.44404513}
   m_Children: []
   m_Father: {fileID: 432038}
   m_RootOrder: 1
@@ -119,8 +119,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112412}
-  m_LocalRotation: {x: 0.09840996, y: -0.7002254, z: -0.09840997, w: -0.7002253}
-  m_LocalPosition: {x: -0.8762741, y: 0.6383133, z: -0.014}
+  m_LocalRotation: {x: 0.1263432, y: -0.69572806, z: -0.12634325, w: -0.69572794}
+  m_LocalPosition: {x: -1.2100008, y: 0.662, z: -0.014001352}
   m_LocalScale: {x: 1, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 432038}
@@ -143,10 +143,10 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 2000
-  field of view: 114.2
+  field of view: 116.8
   orthographic: 0
   orthographic size: 5
-  m_Depth: -0.33
+  m_Depth: -0.36
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294958025

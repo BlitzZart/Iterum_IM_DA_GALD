@@ -25,6 +25,6 @@ public class SqueezerEndState : MonoBehaviour {
         wallStart.DeActivate();
         wallAhead.DeActivate();
 
-        wallAhead.transform.Translate(0, -2, 0);
+        wallAhead.transform.Translate(0, -4, 0);
     }
 }

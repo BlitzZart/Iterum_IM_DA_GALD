@@ -232,7 +232,7 @@ GameObject:
   - 23: {fileID: 2354566}
   - 114: {fileID: 11487040}
   - 114: {fileID: 11494836}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: on
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ GameObject:
   - 23: {fileID: 2338682}
   - 114: {fileID: 11403468}
   - 114: {fileID: 11433300}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: off
   m_TagString: Untagged
   m_Icon: {fileID: 0}

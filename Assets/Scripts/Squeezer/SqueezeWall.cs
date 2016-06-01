@@ -5,14 +5,18 @@ using System;
 
 public class SqueezeWall : MonoBehaviour, ISwitchable {
 
-    public float max, min;
+    [Header("min/max Z value in worldspace")]
+    public float max;
+    public float min;
+    [Header("Sets min to newMin -0.1 when passed newMin")]
+    public float newMin;
 
     private float speed = 10.0f;
-    private bool isVisible = true;
+    //private bool isVisible = true;
     private bool doSqueeze;
 
     private float stepWidth = 0.3f;
-    private float minDistanceToPlayer = 3.8f;
+    private float minDistanceToPlayer = 2.6f;
 
     public SqueezeWall opposite;
 
@@ -24,15 +28,15 @@ public class SqueezeWall : MonoBehaviour, ISwitchable {
         renderComp = GetComponent<Renderer>();
 	}
 	
-    void OnWillRenderObject() {
-        isVisible = true;
-    }
-    void OnBecameInvisible() {
-        isVisible = false;
-    }
-    void OnBecameVisible() {
-        isVisible = true;
-    }
+    //void OnWillRenderObject() {
+    //    isVisible = true;
+    //}
+    //void OnBecameInvisible() {
+    //    isVisible = false;
+    //}
+    //void OnBecameVisible() {
+    //    isVisible = true;
+    //}
 
     void Update() {
         // translate towards player if not visible
@@ -42,8 +46,13 @@ public class SqueezeWall : MonoBehaviour, ISwitchable {
         if (!doSqueeze)
             return;
 
-        if (isVisible)
+        //if (isVisible)
+        if (renderComp.isVisible)
             return;
+        MoveWall();
+    }
+
+    private void MoveWall() {
         // check minimum distance to player
         if (Mathf.Abs(transform.position.z - fpsC.transform.position.z + stepWidth) > minDistanceToPlayer) {
             // wall can follows if min distance
@@ -53,6 +62,10 @@ public class SqueezeWall : MonoBehaviour, ISwitchable {
         else { // pushing is allowed
             Vector3 newPosition = GetNewPositionByMoving(-speed);
             transform.position = newPosition;
+        }
+
+        if (transform.position.z > newMin) {
+            min = newMin;
         }
     }
 
