@@ -12,7 +12,7 @@ public class SqueezeWall : MonoBehaviour, ISwitchable {
     private bool doSqueeze;
 
     private float stepWidth = 0.3f;
-    private float minDistanceToPlayer = 2.6f;
+    private float minDistanceToPlayer = 3.8f;
 
     public SqueezeWall opposite;
 
