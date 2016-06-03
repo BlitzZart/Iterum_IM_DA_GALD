@@ -38,10 +38,10 @@ public class HiResScreenShots : MonoBehaviour {
             RenderTexture.active = null; // JC: added to avoid errors
             //Destroy(rt);
             byte[] bytes = screenShot.EncodeToPNG();
-            //string filename = ScreenShotName(camera.pixelWidth, camera.pixelHeight);
-            //System.IO.File.WriteAllBytes(filename, bytes);
+            string filename = ScreenShotName(camera.pixelWidth, camera.pixelHeight);
+            System.IO.File.WriteAllBytes(filename, bytes);
 
-            //Debug.Log(string.Format("Took screenshot to: {0}", camera.pixelHeight));
+            Debug.Log(string.Format("Took screenshot to: {0}", camera.pixelHeight));
             takeHiResShot = false;
         }
     }

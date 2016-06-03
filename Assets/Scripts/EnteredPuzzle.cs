@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class EnteredPuzzle : MonoBehaviour {
 
     [Header("Player Parentign. False sets parent to PlayerHome")]
     public bool parentPlayerToGameObject = true;
+    //[Header("Deparent Player after parenting. Prevent 90° turn on exit")]
+    public bool extraRotate = false;
+
     private GameObject player;
 
     [Header("Transformation")]
@@ -47,11 +51,9 @@ public class EnteredPuzzle : MonoBehaviour {
 
     void ParentFPSC() {
         if (parentPlayerToGameObject) {
-            //PlayerHome.Instance.transform.position = player.transform.position;
-            //player.transform.position = new Vector3(0, player.transform.position.y, 0);
-            //PlayerHome.Instance.transform.rotation = transform.parent.rotation;
-
             player.transform.parent = transform.parent;
+            if (extraRotate) // correct rotation of player
+                player.GetComponent<FirstPersonController>().RotateBy(0);
         }
         else {
             // set rotation of player home to rotation of current room

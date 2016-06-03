@@ -49,8 +49,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
-        public void SetRotataion(Quaternion rot) {
-            m_Camera.transform.rotation = rot;
+        private bool rotateFromOutside = false;
+
+        public void RotateBy(float rot) {
+            rotateFromOutside = true;
+            transform.Rotate(0, rot, 0);
+            print("ROtated " + rot);
         }
 
         public void SetMoveDir(Vector3 dir) {
@@ -76,7 +80,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            RotateView();
+            if (rotateFromOutside) {
+                m_MouseLook.Init(transform, m_Camera.transform);
+                rotateFromOutside = false;
+            } else {
+                RotateView();
+            }
+
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {

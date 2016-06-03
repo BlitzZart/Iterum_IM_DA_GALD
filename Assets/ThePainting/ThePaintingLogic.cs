@@ -8,22 +8,26 @@ public class ThePaintingLogic : MonoBehaviour {
 
     private HiResScreenShots hiResShot;
 
-    private bool activated = false;
+    private bool inProgress = false;
+    private bool makeLiveScreenshot = false;
 
     // Use this for initialization
     void Start() {
         paintingCam = GetComponentInChildren<Camera>();
         painting = GetComponentInChildren<MeshRenderer>().gameObject;
-        painting.SetActive(false);
+
+        if (makeLiveScreenshot)
+            painting.SetActive(false);
         paintingCam.gameObject.SetActive(false);
         hiResShot = GetComponent<HiResScreenShots>();
     }
 
     void MsgPlayerEntered(GameObject player) {
-        if (activated)
+        if (!makeLiveScreenshot || inProgress)
             return;
 
-        activated = true;
+        print("render");
+        inProgress = true;
 
         paintingCam.gameObject.SetActive(true);
 
