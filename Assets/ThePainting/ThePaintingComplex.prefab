@@ -32,7 +32,7 @@ GameObject:
   - 65: {fileID: 6543310}
   - 23: {fileID: 2345568}
   - 114: {fileID: 11483910}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: e328d7a68ba298c44a247457316a0960, type: 2}
+  - {fileID: 2100000, guid: 56380655220fba648b3f0467497c3dd9, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1

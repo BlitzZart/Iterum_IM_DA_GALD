@@ -642,7 +642,7 @@ GameObject:
   - 23: {fileID: 2329786}
   - 114: {fileID: 11412398}
   - 114: {fileID: 11470956}
-  - 114: {fileID: 11458616}
+  - 114: {fileID: 11414112}
   m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
@@ -2346,6 +2346,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 474184}
   - 114: {fileID: 11416398}
+  - 114: {fileID: 11490572}
   m_Layer: 0
   m_Name: TelePorterOneWay
   m_TagString: Untagged
@@ -7493,7 +7494,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -194, z: 0}
+  m_LocalPosition: {x: 0, y: -92.8, z: 0}
   m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 474184}
@@ -21650,6 +21651,18 @@ MonoBehaviour:
   triggerCount: 1
   repeatTrigger: 1
   backCheck: {fileID: 11434786}
+--- !u!114 &11414112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb19ece38bbc067438e63d2458209a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sendStageEndMessage: 0
 --- !u!114 &11415064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23024,17 +23037,6 @@ MonoBehaviour:
   triggerCount: 1
   repeatTrigger: 1
   backCheck: {fileID: 11434786}
---- !u!114 &11458616
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 115468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebdd073526059f4ca601baaba6a6821, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11459058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24042,6 +24044,17 @@ MonoBehaviour:
   triggerCount: 1
   repeatTrigger: 1
   backCheck: {fileID: 11434786}
+--- !u!114 &11490572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ebdd073526059f4ca601baaba6a6821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11491294
 MonoBehaviour:
   m_ObjectHideFlags: 1

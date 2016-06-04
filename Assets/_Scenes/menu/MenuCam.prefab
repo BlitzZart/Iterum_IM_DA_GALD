@@ -98,10 +98,10 @@ MonoBehaviour:
   tweakMode: 0
   screenBlendMode: 1
   hdr: 0
-  sepBlurSpread: 1.2
+  sepBlurSpread: 4.6
   quality: 1
-  bloomIntensity: 6
-  bloomThreshold: 0.32
+  bloomIntensity: 1.65
+  bloomThreshold: 0.7
   bloomThresholdColor: {r: 1, g: 1, b: 1, a: 1}
   bloomBlurIterations: 1
   hollywoodFlareBlurIterations: 2
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloomRate: 1.11
   bloomSpeed: 1.33
-  BloomRange: 2
+  BloomRange: 1
   skyRotation: 0
   skyboxRotationSpeed: 10
   skyRate: 1

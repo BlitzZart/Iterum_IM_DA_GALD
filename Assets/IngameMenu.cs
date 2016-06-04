@@ -20,7 +20,6 @@ public class IngameMenu : MonoBehaviour {
             ui.SetActive(!ui.activeSelf);
             if (ui.activeSelf)
                 GetComponent<MenuSceneChanger>().InTransition();
-
         }
         if (ui.activeSelf) {
             if (Input.GetKeyDown(KeyCode.Return))

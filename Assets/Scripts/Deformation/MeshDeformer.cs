@@ -206,7 +206,8 @@ public class MeshDeformer : MonoBehaviour, ISwitchable {
         //}
 
         // transfrom player position in mesh(local) space
-        playerPosition = transform.InverseTransformPoint(playerTransform.transform.position);
+        if (playerTransform != null)
+            playerPosition = transform.InverseTransformPoint(playerTransform.transform.position);
         int i = 0;
         foreach (Vertex item in unique) {
             playerDistance = Vector3.Distance(playerPosition, item.oVertex);

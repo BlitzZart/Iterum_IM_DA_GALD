@@ -9,14 +9,16 @@ public class MenuSceneChanger : MonoBehaviour {
     public static string menuSplashName = "MenuSplash";
     public static string menuPlayName = "iterum_mo_Dani2";
     public static string menuCreditsName = "MenuCredits";
+    public static string menuEndName1 = "MenuEnd1";
+    public static string menuEndName2 = "MenuEnd2";
     //public static string menuControlsName = "MenuControls";
 
-    private Color fadeColor = new Color(0f, 0f, 0f);
+    public Color fadeColor = new Color(0f, 0f, 0f);
 
     public GameObject menuPanel;
     private RectTransform panelRect;
 
-    private float transitionDuration = 0.66f;
+    public float transitionDuration = 0.66f;
 
     private Hashtable outTransition;
     private Hashtable inTransition;
@@ -45,7 +47,7 @@ public class MenuSceneChanger : MonoBehaviour {
 
     public void OutTransition() {
         //iTween.MoveTo(menuPanel, outTransition);
-        iTween.ScaleTo(menuPanel, Vector3.one * 0.13f, transitionDuration * 2);
+        iTween.ScaleTo(menuPanel, Vector3.one * 0.13f, transitionDuration * 8);
         iTween.CameraFadeAdd(iTween.CameraTexture(fadeColor));
         iTween.CameraFadeTo(1, transitionDuration);
     }

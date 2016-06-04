@@ -14,6 +14,9 @@ public class MenuMainButtons : MonoBehaviour {
     public void LoadCredits() {
         GetComponent<MenuSceneChanger>().ChangeScene(MenuSceneChanger.menuCreditsName);
     }
+    public void LoadEndGame() {
+        GetComponent<MenuSceneChanger>().ChangeScene(MenuSceneChanger.menuEndName1);
+    }
     public void QuitGame() {
         GetComponent<MenuSceneChanger>().ChangeScene(MenuSceneChanger.menuSplashName);
     }
