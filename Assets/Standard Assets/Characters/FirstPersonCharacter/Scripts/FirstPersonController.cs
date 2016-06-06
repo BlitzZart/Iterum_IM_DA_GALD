@@ -54,7 +54,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void RotateBy(float rot) {
             rotateFromOutside = true;
             transform.Rotate(0, rot, 0);
-            print("ROtated " + rot);
         }
 
         public void SetMoveDir(Vector3 dir) {

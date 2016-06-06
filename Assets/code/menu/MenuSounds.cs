@@ -19,10 +19,10 @@ public class MenuSounds : MonoBehaviour {
     }
 
     public void Select() {
-        soundSource.PlayOneShot(selectionClip, 0.6f);
+        soundSource.PlayOneShot(selectionClip, 0.22f);
     }
     public void Confirm() {
-        soundSource.PlayOneShot(confirmClip, 0.6f);
+        soundSource.PlayOneShot(confirmClip, 0.22f);
     }
     public void EndChange() {
         soundSource.PlayOneShot(endChangeClip, 0.8f);

@@ -70,6 +70,9 @@ public class GameManager : MonoBehaviour {
     }
 
     public void StageFinished(int stageNumber) {
+        if (stageNumber >= allOn.Count)
+            return;
+
         DisableAndEnable(stageNumber);
 
         currentStage = stageNumber + 1;

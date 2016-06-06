@@ -39,6 +39,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &144586
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 409700}
+  - 114: {fileID: 11481128}
+  m_Layer: 10
+  m_Name: HubEnterSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &149442
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +108,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &409700
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 466468}
+  m_RootOrder: 0
 --- !u!4 &410592
 Transform:
   m_ObjectHideFlags: 1
@@ -141,7 +169,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 409700}
   m_Father: {fileID: 410592}
   m_RootOrder: 3
 --- !u!4 &479492
@@ -223,7 +252,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.177
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -678,7 +707,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magicVolume: 0.1
-  fallVolume: 0.6
+  hubEnterVolume: 1
+  fallVolume: 0.3
+--- !u!114 &11481128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c91ad373a176844a4f9da17f0b2e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11483112
 MonoBehaviour:
   m_ObjectHideFlags: 1
