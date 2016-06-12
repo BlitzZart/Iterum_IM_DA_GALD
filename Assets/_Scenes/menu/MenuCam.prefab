@@ -100,8 +100,8 @@ MonoBehaviour:
   hdr: 0
   sepBlurSpread: 4.6
   quality: 1
-  bloomIntensity: 1.65
-  bloomThreshold: 0.7
+  bloomIntensity: 3
+  bloomThreshold: 0.75
   bloomThresholdColor: {r: 1, g: 1, b: 1, a: 1}
   bloomBlurIterations: 1
   hollywoodFlareBlurIterations: 2
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b50d512ecb0214b8a128cdf978cbe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloomRate: 1.11
+  bloomRate: 3.11
   bloomSpeed: 1.33
   BloomRange: 1
   skyRotation: 0

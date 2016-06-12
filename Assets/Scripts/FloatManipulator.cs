@@ -15,6 +15,7 @@ public class FloatManipulator {
 
     public FloatManipulator(float originalValue, float rate, float speed, float randomRange) {
         this.originalValue = originalValue;
+        this.cValue = originalValue;
         this.originalRate = cRate = (rate != 0.0f) ? rate : 1;
         this.speed = speed;
         this.randomRange = (randomRange > 0) ? randomRange : 1;

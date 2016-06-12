@@ -19,6 +19,7 @@ public class MenuSceneChanger : MonoBehaviour {
     private RectTransform panelRect;
 
     public float transitionDuration = 0.66f;
+    public float fadeOutSpeedFactor = 8;
 
     private Hashtable outTransition;
     private Hashtable inTransition;
@@ -47,7 +48,7 @@ public class MenuSceneChanger : MonoBehaviour {
 
     public void OutTransition() {
         //iTween.MoveTo(menuPanel, outTransition);
-        iTween.ScaleTo(menuPanel, Vector3.one * 0.13f, transitionDuration * 8);
+        iTween.ScaleTo(menuPanel, Vector3.one * 0.13f, transitionDuration * fadeOutSpeedFactor);
         iTween.CameraFadeAdd(iTween.CameraTexture(fadeColor));
         iTween.CameraFadeTo(1, transitionDuration);
     }

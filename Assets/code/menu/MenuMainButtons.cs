@@ -2,7 +2,10 @@
 using System.Collections;
 
 public class MenuMainButtons : MonoBehaviour {
-    public void LoadLobby() {
+    public void LoadPlayState() {
+        MenuSounds ms = FindObjectOfType<MenuSounds>();
+        if (ms != null)
+            Destroy(ms.gameObject);
         GetComponent<MenuSceneChanger>().ChangeScene(MenuSceneChanger.menuPlayName);
     }
     //public void LoadControls() {

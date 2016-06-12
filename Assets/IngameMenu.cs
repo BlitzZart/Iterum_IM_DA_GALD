@@ -5,11 +5,13 @@ public class IngameMenu : MonoBehaviour {
 
     GameObject ui;
     MenuMainButtons menuButtons;
+    FadeInOut fader;
 
     // Use this for initialization
     void Start() {
         ui = GetComponentInChildren<Image>().gameObject;
         menuButtons = GetComponent<MenuMainButtons>();
+        fader = GetComponent<FadeInOut>();
 
         ui.SetActive(false);
     }
@@ -22,8 +24,9 @@ public class IngameMenu : MonoBehaviour {
                 GetComponent<MenuSceneChanger>().InTransition();
         }
         if (ui.activeSelf) {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Return)) {
                 menuButtons.LoadMain();
+            }
         }
     }
 }
