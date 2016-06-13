@@ -48,6 +48,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   stage1DoneOn:
   - {fileID: 0}
   - {fileID: 0}
@@ -67,6 +70,7 @@ MonoBehaviour:
   - {fileID: 0}
   stage3DoneOff:
   - {fileID: 0}
+  - {fileID: 188932}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -75,13 +79,20 @@ MonoBehaviour:
   - {fileID: 0}
   stage4DoneOff:
   - {fileID: 0}
-  stage5DoneOn: []
+  - {fileID: 0}
+  stage5DoneOn:
+  - {fileID: 0}
   stage5DoneOff:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   stage6DoneOn:
   - {fileID: 0}
-  stage6DoneOff: []
+  - {fileID: 0}
+  - {fileID: 0}
+  stage6DoneOff:
+  - {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
