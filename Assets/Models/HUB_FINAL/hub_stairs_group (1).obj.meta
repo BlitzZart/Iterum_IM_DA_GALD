@@ -1,0 +1,128 @@
+fileFormatVersion: 2
+guid: a46f99c9e8920814b9fe12935f98b1ec
+timeCreated: 1466005419
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: stairs1_stairs_hub
+    100004: stairs_hub_stairs10
+    100006: stairs_hub_stairs11
+    100008: stairs_hub_stairs12
+    100010: stairs_hub_stairs2
+    100012: stairs_hub_stairs3
+    100014: stairs_hub_stairs4
+    100016: stairs_hub_stairs6
+    100018: stairs_hub_stairs7
+    100020: stairs_hub_stairs8
+    100022: stairs_hub_stairs9
+    400000: //RootNode
+    400002: stairs1_stairs_hub
+    400004: stairs_hub_stairs10
+    400006: stairs_hub_stairs11
+    400008: stairs_hub_stairs12
+    400010: stairs_hub_stairs2
+    400012: stairs_hub_stairs3
+    400014: stairs_hub_stairs4
+    400016: stairs_hub_stairs6
+    400018: stairs_hub_stairs7
+    400020: stairs_hub_stairs8
+    400022: stairs_hub_stairs9
+    2300000: stairs1_stairs_hub
+    2300002: stairs_hub_stairs10
+    2300004: stairs_hub_stairs11
+    2300006: stairs_hub_stairs12
+    2300008: stairs_hub_stairs2
+    2300010: stairs_hub_stairs3
+    2300012: stairs_hub_stairs4
+    2300014: stairs_hub_stairs6
+    2300016: stairs_hub_stairs7
+    2300018: stairs_hub_stairs8
+    2300020: stairs_hub_stairs9
+    3300000: stairs1_stairs_hub
+    3300002: stairs_hub_stairs10
+    3300004: stairs_hub_stairs11
+    3300006: stairs_hub_stairs12
+    3300008: stairs_hub_stairs2
+    3300010: stairs_hub_stairs3
+    3300012: stairs_hub_stairs4
+    3300014: stairs_hub_stairs6
+    3300016: stairs_hub_stairs7
+    3300018: stairs_hub_stairs8
+    3300020: stairs_hub_stairs9
+    4300000: stairs1_stairs_hub
+    4300002: stairs_hub_stairs10
+    4300004: stairs_hub_stairs11
+    4300006: stairs_hub_stairs12
+    4300008: stairs_hub_stairs2
+    4300010: stairs_hub_stairs3
+    4300012: stairs_hub_stairs4
+    4300014: stairs_hub_stairs6
+    4300016: stairs_hub_stairs7
+    4300018: stairs_hub_stairs8
+    4300020: stairs_hub_stairs9
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
