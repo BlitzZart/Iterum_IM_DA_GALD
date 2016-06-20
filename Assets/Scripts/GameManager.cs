@@ -40,6 +40,11 @@ public class GameManager : MonoBehaviour {
     }
 
     void Start() {
+        StartCoroutine(DelayedStart());
+    }
+
+    IEnumerator DelayedStart() {
+        yield return 0;
         allOn = new List<List<GameObject>>();
         allOff = new List<List<GameObject>>();
 

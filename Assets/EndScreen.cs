@@ -12,12 +12,10 @@ public class EndScreen : MonoBehaviour {
         endScreenPage++;
         if (endScreenPage == 1) {
             ShowHeart(false);
-            print("1");
             GetComponent<MenuSceneChanger>().ChangeScene(MenuSceneChanger.menuEndName2, showDuration);
         }
         else if (endScreenPage == 2) {
             ShowHeart(true);
-            print("2");
             GetComponent<MenuSceneChanger>().ChangeScene(MenuSceneChanger.menuMainName, showDuration);
         }
     }
