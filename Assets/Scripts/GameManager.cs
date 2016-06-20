@@ -40,6 +40,12 @@ public class GameManager : MonoBehaviour {
     }
 
     void Start() {
+        StartCoroutine(StartDelayed());
+    }
+
+    IEnumerator StartDelayed() {
+        yield return 0;
+
         allOn = new List<List<GameObject>>();
         allOff = new List<List<GameObject>>();
 
@@ -63,6 +69,7 @@ public class GameManager : MonoBehaviour {
 
         StageEnd.EndOfStage += StageFinished;
     }
+
 
     private void StartFirstStage() {
         currentStage = 0;
