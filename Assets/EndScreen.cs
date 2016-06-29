@@ -15,7 +15,7 @@ public class EndScreen : MonoBehaviour {
             GetComponent<MenuSceneChanger>().ChangeScene(MenuSceneChanger.menuEndName2, showDuration);
         }
         else if (endScreenPage == 2) {
-            ShowHeart(true);
+           // ShowHeart(true);
             GetComponent<MenuSceneChanger>().ChangeScene(MenuSceneChanger.menuMainName, showDuration);
         }
     }

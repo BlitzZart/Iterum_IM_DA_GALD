@@ -226,7 +226,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Someone made this game.
+  m_Text: Thank you for playing ITERUM.
 --- !u!222 &255876949
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -303,6 +303,7 @@ MonoBehaviour:
   fadeColor: {r: 1, g: 1, b: 1, a: 1}
   menuPanel: {fileID: 65389461}
   transitionDuration: 2.33
+  fadeOutSpeedFactor: 8
 --- !u!1 &1065913541
 GameObject:
   m_ObjectHideFlags: 0
