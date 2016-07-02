@@ -8,7 +8,7 @@ public class FinalEffect : MonoBehaviour {
     Bloom bloom;
     bool fadeToWhite = false;
 
-    float timeBeforeLock = 1.0f;
+    float timeBeforeLock = 3.0f;
     float timeBeforeFade = 7.5f;
     float bloomFadeDuration = 11.7f;
     float endScreenFadeDuration = 2.77f;
@@ -70,6 +70,7 @@ public class FinalEffect : MonoBehaviour {
             heart.enabled = false;
             heart.GetComponent<HeartDeformer>().enabled = false;
             heart.transform.parent = null;
+            heart.transform.position = Vector3.zero;
             DontDestroyOnLoad(heart.gameObject);
         }
     }

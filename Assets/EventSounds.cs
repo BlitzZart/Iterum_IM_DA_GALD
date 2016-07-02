@@ -54,7 +54,6 @@ public class EventSounds : MonoBehaviour {
     }
 
     public void StopFallingSound() {
-        print("STOP");
         source.Stop();
     }
 

@@ -9,7 +9,7 @@ public class ThePaintingLogic : MonoBehaviour {
     private HiResScreenShots hiResShot;
 
     private bool inProgress = false;
-    private bool makeLiveScreenshot = false;
+    public bool makeLiveScreenshot = false;
 
     // Use this for initialization
     void Start() {
@@ -26,7 +26,6 @@ public class ThePaintingLogic : MonoBehaviour {
         if (!makeLiveScreenshot || inProgress)
             return;
 
-        print("render");
         inProgress = true;
 
         paintingCam.gameObject.SetActive(true);
