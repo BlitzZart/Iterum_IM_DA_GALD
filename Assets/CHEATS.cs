@@ -11,7 +11,7 @@ public class CHEATS : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	    if (Input.GetMouseButtonDown(0)) {
+	    if (Input.GetKeyDown(KeyCode.Return)) {
             if (Input.GetKey(KeyCode.X)) {
                 if (Input.GetKey(KeyCode.C)) {
                     FirstPersonController fpsc = GetComponent<FirstPersonController>();
@@ -28,13 +28,13 @@ public class CHEATS : MonoBehaviour {
                         fpsc.m_RunSpeed = original_runSpeed;
                     }
                 }
-                else if (Input.GetKey(KeyCode.V)) {
-                    EdgeDetection ed = GetComponentInChildren<EdgeDetection>();
-                    if (ed == null)
-                        return;
+                //else if (Input.GetKey(KeyCode.V)) {
+                //    EdgeDetection ed = GetComponentInChildren<EdgeDetection>();
+                //    if (ed == null)
+                //        return;
 
-                    ed.enabled = !ed.enabled;
-                }
+                //    ed.enabled = !ed.enabled;
+                //}
             }
         }
 	}

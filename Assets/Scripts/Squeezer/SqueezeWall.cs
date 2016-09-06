@@ -56,7 +56,7 @@ public class SqueezeWall : MonoBehaviour, ISwitchable {
         // check minimum distance to player
         if (Mathf.Abs(transform.position.z - fpsC.transform.position.z + stepWidth) > minDistanceToPlayer) {
             // wall can follows if min distance
-            Vector3 newPosition = GetNewPositionByLerping(speed);
+            Vector3 newPosition = GetNewPositionByLerping(speed/3.0f);
             transform.position = newPosition;
         }
         else { // pushing is allowed

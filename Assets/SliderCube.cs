@@ -26,15 +26,26 @@ public class SliderCube : MonoBehaviour {
 
         if (min.bounds.Contains(player.transform.position)) {
             value = 0;
+            edgeDetection.sampleDist = 0;
+            //print(">> 0 " + name);
         }
         else if (max.bounds.Contains(player.transform.position)) {
             value = 1;
+            edgeDetection.sampleDist = 1;
+            //print(">> 1 " + name);
         }
-        else if (coll.bounds.Contains(player.transform.position)) {
-           value = Mathf.Clamp01(Vector3.Distance(player.transform.position, zeroPoint.position) / transform.localScale.z);
+        else /*if (coll.bounds.Contains(player.transform.position))*/ {
+            value = Mathf.Clamp01(Vector3.Distance(player.transform.position, zeroPoint.position) / transform.localScale.z);
+            if (value > 0.051f)
+                edgeDetection.sampleDist = 1;
+            else {
+                edgeDetection.sampleDist = 0;
+            }
+            //print(">> " + value + name);
         }
 
-            edgeDetection.edgesOnly = value;
+        edgeDetection.edgesOnly = value;
+
 
 
         //edgeDetection.edgesOnly = Mathf.Lerp(edgeDetection.edgesOnly, value, Time.deltaTime * 100);
