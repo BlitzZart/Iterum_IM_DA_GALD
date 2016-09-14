@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.ImageEffects;
+using UnityEngine.VR;
 
 public class SliderCube : MonoBehaviour {
 
     private GameObject player;
-    private EdgeDetection edgeDetection;
+    public EdgeDetection edgeDetection;
     private Collider coll;
 
     public Transform zeroPoint;
@@ -19,7 +20,7 @@ public class SliderCube : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (player == null)
+        if (player == null || edgeDetection == null)
             return;
 
         float value = 0;

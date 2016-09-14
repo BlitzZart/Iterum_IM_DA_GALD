@@ -7,7 +7,7 @@ public class MenuSceneChanger : MonoBehaviour {
 
     public static string menuMainName = "MenuMain";
     public static string menuSplashName = "MenuSplash";
-    public static string menuPlayName = "iterum_mo_Dani2";
+    public static string menuPlayName = "iterum_vive";//"iterum_mo_Dani2";
     public static string menuCreditsName = "MenuCredits";
     public static string menuEndName1 = "MenuEnd1";
     public static string menuEndName2 = "MenuEnd2";

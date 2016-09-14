@@ -12,8 +12,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/menu/MenuCredits.unity
   - enabled: 1
+    path: Assets/_Scenes/iterum_vive.unity
+  - enabled: 0
     path: Assets/_Scenes/iterum_mo_Dani2.unity
   - enabled: 1
     path: Assets/_Scenes/menu/MenuEnd1.unity
   - enabled: 1
     path: Assets/_Scenes/menu/MenuEnd2.unity
+  - enabled: 1
+    path: Assets/SteamVR/Scenes/example.unity
