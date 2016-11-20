@@ -10,7 +10,6 @@ public class GameConfig : MonoBehaviour {
     void Start() {
         int lvl = QualitySettings.GetQualityLevel();
 
-        print(lvl + " qual");
 
         Bloom[] blooms = Camera.main.GetComponents<Bloom>();
 
