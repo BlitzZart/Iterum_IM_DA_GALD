@@ -18,13 +18,13 @@ public class IngameMenu : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetButtonDown("InGameMenu")/*Input.GetKeyDown(KeyCode.Escape)*/) {
             ui.SetActive(!ui.activeSelf);
             if (ui.activeSelf)
                 GetComponent<MenuSceneChanger>().InTransition();
         }
         if (ui.activeSelf) {
-            if (Input.GetKeyDown(KeyCode.Return)) {
+            if (Input.GetButtonDown("Cancel")/*Input.GetKeyDown(KeyCode.Return)*/) {
                 menuButtons.LoadMain();
             }
         }

@@ -25,6 +25,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
         [SerializeField] private MouseLook m_MouseLook;
+        [SerializeField] private float m_GamepadRotationSpeed = 100;
         [SerializeField] private bool m_UseFovKick;
         [SerializeField] private FOVKick m_FovKick = new FOVKick();
         [SerializeField] private bool m_UseHeadBob;
@@ -83,7 +84,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_MouseLook.Init(transform, m_Camera.transform);
                 rotateFromOutside = false;
             } else {
-                RotateView();
+                GamepadRotation();
+                MouseRotation();
             }
 
             // the jump state needs to read here to make sure it is not missed
@@ -257,10 +259,25 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
+        private bool GamepadRotation() {
+            float rotX = Input.GetAxis("RightStickX");
+            float rotY = Input.GetAxis("RightStickY");
 
-        private void RotateView()
-        {
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+            // no joistic imput occured
+            if (rotX == 0 && rotY == 0)
+                return false;
+
+            // apply rotation on player and camera
+            transform.Rotate(0, rotX * m_GamepadRotationSpeed * Time.deltaTime, 0);
+            m_Camera.transform.Rotate(rotY * m_GamepadRotationSpeed * Time.deltaTime, 0, 0);
+
+            // set mouse look to transformed rotation
+            m_MouseLook.Init(transform, m_Camera.transform);
+            return true;
+        }
+
+        private void MouseRotation() {
+            m_MouseLook.LookRotation(transform, m_Camera.transform);
         }
 
 
