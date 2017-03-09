@@ -20,7 +20,7 @@ public class FinalEffect : MonoBehaviour {
     float intensity_a;
     float threshold_a;
 
-    float intensity_b = 150;
+    float intensity_b = 25;
     float threshold_b = 0;
 
     void OnTriggerEnter(Collider other) {

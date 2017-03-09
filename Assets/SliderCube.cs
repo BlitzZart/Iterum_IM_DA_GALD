@@ -26,7 +26,7 @@ public class SliderCube : MonoBehaviour {
 
         if (min.bounds.Contains(player.transform.position)) {
             value = 0;
-            edgeDetection.sampleDist = 0;
+            edgeDetection.sampleDist = 1;
             //print(">> 0 " + name);
         }
         else if (max.bounds.Contains(player.transform.position)) {
@@ -39,7 +39,7 @@ public class SliderCube : MonoBehaviour {
             if (value > 0.051f)
                 edgeDetection.sampleDist = 1;
             else {
-                edgeDetection.sampleDist = 0;
+                edgeDetection.sampleDist = 1;
             }
             //print(">> " + value + name);
         }
