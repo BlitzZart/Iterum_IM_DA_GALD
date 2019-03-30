@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.iterum_roomtests.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "D:\\Repositories\\Iterum\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Iterum_RoomTests [Testing]"
+        }
+      }
+    }
+  ]
+}
