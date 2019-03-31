@@ -162,7 +162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -67}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &255876946
@@ -330,6 +330,52 @@ MonoBehaviour:
   menuPanel: {fileID: 65389461}
   transitionDuration: 0.66
   fadeOutSpeedFactor: 8
+--- !u!1001 &794740873
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4424264843104588, guid: 55847b1cc9cdfda429a549a67f8aa696, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424264843104588, guid: 55847b1cc9cdfda429a549a67f8aa696, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.7458005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424264843104588, guid: 55847b1cc9cdfda429a549a67f8aa696, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -26.005692
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424264843104588, guid: 55847b1cc9cdfda429a549a67f8aa696, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424264843104588, guid: 55847b1cc9cdfda429a549a67f8aa696, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424264843104588, guid: 55847b1cc9cdfda429a549a67f8aa696, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424264843104588, guid: 55847b1cc9cdfda429a549a67f8aa696, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424264843104588, guid: 55847b1cc9cdfda429a549a67f8aa696, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436502292409418, guid: 55847b1cc9cdfda429a549a67f8aa696, type: 2}
+      propertyPath: m_Name
+      value: MenuMounting (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 55847b1cc9cdfda429a549a67f8aa696, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1065913541
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +558,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 445456, guid: 64ecc2902203bd744a8b37e487ecea3f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -78.338036
+      value: -85
       objectReference: {fileID: 0}
     - target: {fileID: 445456, guid: 64ecc2902203bd744a8b37e487ecea3f, type: 2}
       propertyPath: m_LocalRotation.x
@@ -534,9 +580,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2087332, guid: 64ecc2902203bd744a8b37e487ecea3f, type: 2}
-      propertyPath: orthographic
-      value: 0
+    - target: {fileID: 11463654, guid: 64ecc2902203bd744a8b37e487ecea3f, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64ecc2902203bd744a8b37e487ecea3f, type: 2}

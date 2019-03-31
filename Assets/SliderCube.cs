@@ -6,6 +6,7 @@ public class SliderCube : MonoBehaviour {
 
     private GameObject player;
     private EdgeDetection edgeDetection;
+    private Bloom bloom;
     private Collider coll;
 
     public Transform zeroPoint;
@@ -14,6 +15,7 @@ public class SliderCube : MonoBehaviour {
     // Use this for initialization
     void Start() {
         edgeDetection = Camera.main.GetComponent<EdgeDetection>();
+        bloom = Camera.main.GetComponent<Bloom>();
         coll = GetComponent<Collider>();
     }
 
@@ -27,28 +29,50 @@ public class SliderCube : MonoBehaviour {
         if (min.bounds.Contains(player.transform.position)) {
             value = 0;
             edgeDetection.sampleDist = 0;
+            edgeDetection.enabled = false;
+
             //print(">> 0 " + name);
         }
         else if (max.bounds.Contains(player.transform.position)) {
             value = 1;
+            edgeDetection.enabled = true;
             edgeDetection.sampleDist = 1;
             //print(">> 1 " + name);
         }
         else /*if (coll.bounds.Contains(player.transform.position))*/ {
             value = Mathf.Clamp01(Vector3.Distance(player.transform.position, zeroPoint.position) / transform.localScale.z);
             if (value > 0.051f)
+            {
+                edgeDetection.enabled = true;
                 edgeDetection.sampleDist = 1;
-            else {
-                edgeDetection.sampleDist = 0;
             }
+            else
+            {
+                edgeDetection.sampleDist = 0;
+                edgeDetection.enabled = false;
+            }
+
             //print(">> " + value + name);
         }
 
         edgeDetection.edgesOnly = value;
 
+        if (value < 0.9f) {
+            if (!bloom.enabled)
+            {
+                bloom.enabled = true;
+            }
+            bloom.bloomIntensity = 1 - value;
+        }
+        else
+        {
+            if (bloom.enabled)
+            {
+                bloom.bloomIntensity = 0;
+                bloom.enabled = false;
+            }
+        }
 
-
-        //edgeDetection.edgesOnly = Mathf.Lerp(edgeDetection.edgesOnly, value, Time.deltaTime * 100);
         //print(">> " + value);
     }
 

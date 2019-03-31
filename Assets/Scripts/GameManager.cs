@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour {
     public List<GameObject> stage3DoneOff;
     public List<GameObject> stage4DoneOn;
     public List<GameObject> stage4DoneOff;
+    public List<GameObject> stage4Delete;
+
     public List<GameObject> stage5DoneOn;
     public List<GameObject> stage5DoneOff;
     public List<GameObject> stage6DoneOn;
@@ -107,6 +109,14 @@ public class GameManager : MonoBehaviour {
                 iSwitch.Activate();
             else
                 go.SetActive(true);
+        }
+
+        if (stage == 4)
+        {
+            foreach (GameObject go in stage4Delete)
+            {
+                Destroy(go);
+            }
         }
     }
 }

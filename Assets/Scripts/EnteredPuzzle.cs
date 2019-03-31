@@ -12,6 +12,8 @@ public class EnteredPuzzle : MonoBehaviour {
 
     private GameObject player;
 
+    private CheckIfPlayerWithin m_checkWithin;
+
     [Header("Transformation")]
     public Vector3 targetPosition;
     public float targetRotation = 9999;
@@ -30,6 +32,8 @@ public class EnteredPuzzle : MonoBehaviour {
     void Start() {
         if (sightCheck == null)
             doOnlyIfNotVisible = false;
+
+        m_checkWithin = GetComponentInChildren<CheckIfPlayerWithin>();
     }
 
     void MsgPlayerEntered(GameObject player) {
@@ -43,9 +47,15 @@ public class EnteredPuzzle : MonoBehaviour {
     }
 
     void TryToApply() {
+        // Player must NOT look at door
+        // AND be within puzzle
+
         if (!sightCheckRenderer.isVisible) {
-            CancelInvoke("TryToApply");
-            ApplyChanges();
+            if (!m_checkWithin || m_checkWithin.PlayerIsWithin)
+            {
+                CancelInvoke("TryToApply");
+                ApplyChanges();
+            }
         }
     }
 
