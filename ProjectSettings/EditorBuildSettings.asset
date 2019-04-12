@@ -10,6 +10,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/menu/MenuMain.unity
   - enabled: 1
+    path: Assets/_Scenes/menu/MenuControls.unity
+  - enabled: 1
     path: Assets/_Scenes/menu/MenuCredits.unity
   - enabled: 1
     path: Assets/_Scenes/iterum_mo_Dani2.unity

@@ -24,18 +24,34 @@ public class VrFpsControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // win
+
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
         float turn = Input.GetAxis("RightStickX_Win");
-        // mac
-        //float turn = Input.GetAxis("RightStickX_Mac");
+#elif UNITY_STANDALONE_OSX
+        float turn = Input.GetAxis("RightStickX_Mac");
+#endif
+
+        // keyboard input
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            turn = 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            turn = -1;
+        }
+
 
         if (Mathf.Abs(turn) < m_deadZone)
         {
             m_readyToRotate = true;
+
         }
 
         if (m_readyToRotate && Mathf.Abs(turn) > m_deadZone)
         {
+
             m_readyToRotate = false;
 
             if (turn > 0)
