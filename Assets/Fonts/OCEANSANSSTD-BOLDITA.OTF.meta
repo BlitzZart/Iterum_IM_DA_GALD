@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: ace8601730a32314781cef041de9d948
+timeCreated: 1556958868
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Ocean Sans Std
+  fontNames:
+  - Ocean Sans Std
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 222223203c93d454ebcc0d573eed3321, type: 3}
+  - {fileID: 12800000, guid: 5037727228a13ea4cb5a7bb2d3390210, type: 3}
+  - {fileID: 12800000, guid: 59004ff4e6302004aa730b9b865ef1c4, type: 3}
+  - {fileID: 12800000, guid: 3103ad3660456d84f9db03a5f2bd7c97, type: 3}
+  - {fileID: 12800000, guid: 04c13487118bf374c88eda9701c2de41, type: 3}
+  - {fileID: 12800000, guid: 05f54c872ab8f2a4db2e491b73732022, type: 3}
+  - {fileID: 12800000, guid: 91452ca7048312544ba1dd16b77e9e6a, type: 3}
+  - {fileID: 12800000, guid: 9aced8d7a68199043b2dc46c7c920704, type: 3}
+  - {fileID: 12800000, guid: 768189a9e0a45de42a20d8804a77fe05, type: 3}
+  - {fileID: 12800000, guid: 84494fe97a417c64390d1a9d3ffd2c50, type: 3}
+  - {fileID: 12800000, guid: 6f8fde0bacd61a44f935a3b3bb53bf6c, type: 3}
+  - {fileID: 12800000, guid: 6f8bf63b07b80f642a7f0e08efada5a0, type: 3}
+  - {fileID: 12800000, guid: 1a7d2becb8df33145b2de6d45912f58f, type: 3}
+  - {fileID: 12800000, guid: 1350727d9ec7da745b1d7e3ebaee0197, type: 3}
+  - {fileID: 12800000, guid: 0a85290ee1405974fb928c778a8c0cb6, type: 3}
+  - {fileID: 12800000, guid: a53c217f8d9f50240ababe31c4bf411f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

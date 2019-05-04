@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 222223203c93d454ebcc0d573eed3321
+timeCreated: 1556958867
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Ocean Sans Std
+  fontNames:
+  - Ocean Sans Std
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 04c13487118bf374c88eda9701c2de41, type: 3}
+  - {fileID: 12800000, guid: 05f54c872ab8f2a4db2e491b73732022, type: 3}
+  - {fileID: 12800000, guid: 1a7d2becb8df33145b2de6d45912f58f, type: 3}
+  - {fileID: 12800000, guid: 1350727d9ec7da745b1d7e3ebaee0197, type: 3}
+  - {fileID: 12800000, guid: 0a85290ee1405974fb928c778a8c0cb6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

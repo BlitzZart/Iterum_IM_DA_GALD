@@ -5,6 +5,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class VrFpsControl : MonoBehaviour
 {
+    private bool m_useFadeBlack = true;
 
     public FadeMaterials toBlack;
 
@@ -19,6 +20,7 @@ public class VrFpsControl : MonoBehaviour
     void Start()
     {
         m_fpsCtrl = GetComponent<FirstPersonController>();
+        m_useFadeBlack = PlayerPrefs.GetInt(CtrlFadeToBlackRotation.USE_CLASSIC_ROTATION) == 0;
     }
 
     // Update is called once per frame
@@ -33,42 +35,53 @@ public class VrFpsControl : MonoBehaviour
 
         // keyboard input
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (m_useFadeBlack)
         {
-            turn = 1;
-        }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            turn = -1;
-        }
-
-
-        if (Mathf.Abs(turn) < m_deadZone)
-        {
-            m_readyToRotate = true;
-
-        }
-
-        if (m_readyToRotate && Mathf.Abs(turn) > m_deadZone)
-        {
-
-            m_readyToRotate = false;
-
-            if (turn > 0)
+            if (Input.GetKeyDown(KeyCode.RightArrow))
             {
-                toBlack.ShortBlack();
-                StopAllCoroutines();
-                StartCoroutine(Turn(m_turnStep));
+                turn = 1;
             }
-            else
+            else if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                toBlack.ShortBlack();
-                StopAllCoroutines();
-                StartCoroutine(Turn(-m_turnStep));
+                turn = -1;
+            }
+            if (Mathf.Abs(turn) < m_deadZone)
+            {
+                m_readyToRotate = true;
+
+            }
+
+            if (m_readyToRotate && Mathf.Abs(turn) > m_deadZone)
+            {
+                m_readyToRotate = false;
+
+                if (turn > 0)
+                {
+                    toBlack.ShortBlack();
+                    StopAllCoroutines();
+                    StartCoroutine(Turn(m_turnStep));
+                }
+                else
+                {
+                    toBlack.ShortBlack();
+                    StopAllCoroutines();
+                    StartCoroutine(Turn(-m_turnStep));
+                }
             }
         }
-
-
+        else
+        {
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                turn = 1;
+            }
+            else if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                turn = -1;
+            }
+            // without fade to black turn
+            m_fpsCtrl.RotateBy(turn * Time.deltaTime * 200);
+        }
     }
     private IEnumerator Turn(float dir)
     {

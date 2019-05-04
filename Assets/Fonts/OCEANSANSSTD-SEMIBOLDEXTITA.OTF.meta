@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 04c13487118bf374c88eda9701c2de41
+timeCreated: 1556958867
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Ocean Sans Std
+  fontNames:
+  - Ocean Sans Std
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
