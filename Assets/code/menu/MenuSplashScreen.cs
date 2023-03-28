@@ -14,7 +14,7 @@ public class MenuSplashScreen : MonoBehaviour {
     void Start() {
         // only go to main menu when game starts
         if (!loadedOnce) {
-            Cursor.visible = false;
+            //Cursor.visible = false;
             GetComponent<MenuSceneChanger>().ChangeScene(MenuSceneChanger.menuMainName, splashScreenDuration);
             loadedOnce = true;
         }

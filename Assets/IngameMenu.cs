@@ -29,4 +29,24 @@ public class IngameMenu : MonoBehaviour {
             }
         }
     }
+
+    public void ShowMenu()
+    {
+        ui.SetActive(!ui.activeSelf);
+        if (ui.activeSelf)
+            GetComponent<MenuSceneChanger>().InTransition();
+    }
+
+    public void Continue()
+    {
+        ui.SetActive(false);
+    }
+
+    public void Quit()
+    {
+        if (ui.activeSelf)
+        {
+            menuButtons.LoadMain();
+        }
+    }
 }
