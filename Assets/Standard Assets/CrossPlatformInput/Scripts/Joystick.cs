@@ -14,6 +14,8 @@ namespace UnityStandardAssets.CrossPlatformInput
 			OnlyVertical // Only vertical
 		}
 
+		public AnimationCurve curve;
+
 		public int MovementRange = 100;
 		public AxisOption axesToUse = AxisOption.Both; // The options for the axes that the still will use
 		public string horizontalAxisName = "Horizontal"; // The name given to the horizontal axis for the cross platform input
@@ -25,7 +27,16 @@ namespace UnityStandardAssets.CrossPlatformInput
 		CrossPlatformInputManager.VirtualAxis m_HorizontalVirtualAxis; // Reference to the joystick in the cross platform input
 		CrossPlatformInputManager.VirtualAxis m_VerticalVirtualAxis; // Reference to the joystick in the cross platform input
 
-		void OnEnable()
+        // DARA: added some functionality to make stick snap to on down position
+		// before movement takes affect
+        private Vector3 m_tempStartPos;
+        // DARA: needed to make speed dependent on stick distance
+        private float m_stickMovedNormalized = 0f;
+		public float StickMovedNormalized { get => m_stickMovedNormalized; }
+		// DARA: amplify movement
+		[SerializeField] private float m_stickIntensityMultiplier = 1f;
+
+        void OnEnable()
 		{
 			CreateVirtualAxes();
 		}
@@ -37,10 +48,29 @@ namespace UnityStandardAssets.CrossPlatformInput
 
 		void UpdateVirtualAxes(Vector3 value)
 		{
-			var delta = m_StartPos - value;
+			var delta = m_tempStartPos - value;
 			delta.y = -delta.y;
 			delta /= MovementRange;
-			if (m_UseX)
+
+			// DARA: needed because we are using curves
+			// and get negative values
+            float xSignCorrection = 1f;
+			if (delta.x < 0)
+			{
+				xSignCorrection = -1f;
+				delta.x *= -1f;
+            }
+            float ySignCorrection = 1f;
+            if (delta.y < 0)
+            {
+                ySignCorrection = -1f;
+				delta.y *= -1f;
+            }
+
+            delta.x *= curve.Evaluate(delta.x) * xSignCorrection;
+            delta.y *= curve.Evaluate(delta.y) * ySignCorrection;
+
+            if (m_UseX)
 			{
 				m_HorizontalVirtualAxis.Update(-delta.x);
 			}
@@ -77,30 +107,40 @@ namespace UnityStandardAssets.CrossPlatformInput
 
 			if (m_UseX)
 			{
-				int delta = (int)(data.position.x - m_StartPos.x);
+				int delta = (int)(data.position.x - m_tempStartPos.x);
 				delta = Mathf.Clamp(delta, - MovementRange, MovementRange);
 				newPos.x = delta;
 			}
 
 			if (m_UseY)
 			{
-				int delta = (int)(data.position.y - m_StartPos.y);
+				int delta = (int)(data.position.y - m_tempStartPos.y);
 				delta = Mathf.Clamp(delta, -MovementRange, MovementRange);
 				newPos.y = delta;
 			}
-			transform.position = new Vector3(m_StartPos.x + newPos.x, m_StartPos.y + newPos.y, m_StartPos.z + newPos.z);
-			UpdateVirtualAxes(transform.position);
+			transform.position = new Vector3(m_tempStartPos.x + newPos.x, m_tempStartPos.y + newPos.y, m_tempStartPos.z + newPos.z);
+
+            m_stickMovedNormalized = Mathf.Clamp01((transform.position - m_tempStartPos).magnitude / (float)MovementRange);
+
+
+            UpdateVirtualAxes(transform.position);
 		}
 
 
 		public void OnPointerUp(PointerEventData data)
 		{
-			transform.position = m_StartPos;
+			m_tempStartPos = m_StartPos;
+
+            transform.position = m_StartPos;
 			UpdateVirtualAxes(m_StartPos);
 		}
 
 
-		public void OnPointerDown(PointerEventData data) { }
+		public void OnPointerDown(PointerEventData data)
+		{
+			m_tempStartPos = data.position;
+			transform.position = m_tempStartPos;
+		}
 
 		void OnDisable()
 		{

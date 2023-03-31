@@ -52,6 +52,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private bool rotateFromOutside = false;
 
+        private Joystick m_Joystick;
+
         public void RotateBy(float rot) {
             rotateFromOutside = true;
             transform.Rotate(0, rot, 0);
@@ -74,6 +76,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+
+            m_Joystick = GameObject.Find("WalkMobileJoystick")?.GetComponent<Joystick>();
+            if (m_Joystick == null)
+            {
+                Debug.LogError("WalkMobileJoystick not found!");
+            }
         }
 
 
@@ -151,6 +159,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
             }
+
+            // DARA: needed to utilize graded speed depending on stick movement
+            float y = m_MoveDir.y;
+            m_MoveDir *= m_Joystick.StickMovedNormalized;
+            m_MoveDir.y = y;
+
             m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
 
             ProgressStepCycle(speed);
