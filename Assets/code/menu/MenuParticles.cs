@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuParticles : MonoBehaviour {
 
-    ParticleEmitter pEmitter;
-    ParticleRenderer pRenderer;
+    //ParticleEmitter pEmitter;
+    //ParticleRenderer pRenderer;
 
     void OnLevelWasLoaded(int level) {
         if (SceneManager.GetActiveScene().name.Contains("lobby"))
@@ -15,13 +15,13 @@ public class MenuParticles : MonoBehaviour {
     }
 
     void SetParticlesActive(bool value) {
-        pEmitter.enabled = value;
-        pRenderer.enabled = value;
+        //pEmitter.enabled = value;
+        //pRenderer.enabled = value;
     }
 
     void Start() {
-        pEmitter = GetComponent<ParticleEmitter>();
-        pRenderer = GetComponent<ParticleRenderer>();
+        //pEmitter = GetComponent<ParticleEmitter>();
+        //pRenderer = GetComponent<ParticleRenderer>();
         DontDestroyOnLoad(transform.gameObject);
     }
 }

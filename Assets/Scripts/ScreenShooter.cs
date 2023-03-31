@@ -12,7 +12,7 @@ public class ScreenShooter : MonoBehaviour {
 	void Update() {
         if (Input.GetMouseButtonDown(0)) {
             print("Knips");
-            Application.CaptureScreenshot("Screenshot.png", 2);
+            ScreenCapture.CaptureScreenshot("Screenshot.png", 2);
         }
 
 	}
