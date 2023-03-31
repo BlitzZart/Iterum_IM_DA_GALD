@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EndScreen : MonoBehaviour {
-    private float showDuration = 7.333f;
+    private float showDuration = 2f;
 
     private static int endScreenPage = 0;
 
