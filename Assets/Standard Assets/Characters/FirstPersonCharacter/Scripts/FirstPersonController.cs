@@ -76,6 +76,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            m_MouseLook.YSensitivity *= 0.333f; 
 
             m_Joystick = GameObject.Find("WalkMobileJoystick")?.GetComponent<Joystick>();
             if (m_Joystick == null)

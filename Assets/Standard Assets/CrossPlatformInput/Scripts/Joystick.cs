@@ -33,8 +33,6 @@ namespace UnityStandardAssets.CrossPlatformInput
         // DARA: needed to make speed dependent on stick distance
         private float m_stickMovedNormalized = 0f;
 		public float StickMovedNormalized { get => m_stickMovedNormalized; }
-		// DARA: amplify movement
-		[SerializeField] private float m_stickIntensityMultiplier = 1f;
 
         void OnEnable()
 		{
