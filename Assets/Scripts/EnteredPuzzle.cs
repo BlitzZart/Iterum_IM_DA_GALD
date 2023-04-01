@@ -45,6 +45,16 @@ public class EnteredPuzzle : MonoBehaviour {
     void TryToApply() {
         if (!sightCheckRenderer.isVisible) {
             CancelInvoke("TryToApply");
+
+            InsideOfLevelArea inside = transform.parent.GetComponentInChildren<InsideOfLevelArea>();
+            if (inside != null)
+            {
+                if (!inside.playerIsInside)
+                {
+                    return;
+                }
+            }
+
             ApplyChanges();
         }
     }
