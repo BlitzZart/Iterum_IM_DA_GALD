@@ -6,14 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/menu/MenuSplash.unity
-  - enabled: 1
     path: Assets/_Scenes/menu/MenuMain.unity
+    guid: a1cdca12fd6beb346b17daf08e4e946e
   - enabled: 1
     path: Assets/_Scenes/menu/MenuCredits.unity
+    guid: 360be246890727a41868768a0eb87d8b
   - enabled: 1
     path: Assets/_Scenes/iterum_mo_Dani2.unity
+    guid: 255240c5b0a163040b51f771094a256f
   - enabled: 1
     path: Assets/_Scenes/menu/MenuEnd1.unity
+    guid: 5aca7c5330687ba4ab22f99df6249c1d
   - enabled: 1
     path: Assets/_Scenes/menu/MenuEnd2.unity
+    guid: 3e9a662b0b65dd04eb09ac7778e8c713
+  m_configObjects: {}

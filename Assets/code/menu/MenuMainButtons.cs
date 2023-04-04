@@ -26,6 +26,7 @@ public class MenuMainButtons : MonoBehaviour {
         GetComponent<MenuSceneChanger>().ChangeScene(MenuSceneChanger.menuEndName1);
     }
     public void QuitGame() {
-        GetComponent<MenuSceneChanger>().ChangeScene(MenuSceneChanger.menuSplashName);
+        Application.Quit();
+        //GetComponent<MenuSceneChanger>().ChangeScene(MenuSceneChanger.menuSplashName);
     }
 }
